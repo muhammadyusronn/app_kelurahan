@@ -1,105 +1,96 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SMPN 37 OKU</title>
-    <!-- Title Icon -->
-    <link rel="icon" type="image/x-icon" href="<?php base_url() ?>assets/img/smp.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
-    <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
-    <meta name="author" content="freehtml5.co" />
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <!-- 
-	//////////////////////////////////////////////////////
+  <title>Company Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-	FREE HTML5 TEMPLATE 
-	DESIGNED & DEVELOPED by FreeHTML5.co
-		
-	Website: 		http://freehtml5.co/
-	Email: 			info@freehtml5.co
-	Twitter: 		http://twitter.com/fh5co
-	Facebook: 		https://www.facebook.com/fh5co
+  <!-- Favicons -->
+  <link href="<?=base_url()?>assets/frontend/img/favicon.png" rel="icon">
+  <link href="<?=base_url()?>assets/frontend/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-	//////////////////////////////////////////////////////
-	 -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <!-- Facebook and Twitter integration -->
-    <meta property="og:title" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:site_name" content="" />
-    <meta property="og:description" content="" />
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:image" content="" />
-    <meta name="twitter:url" content="" />
-    <meta name="twitter:card" content="" />
+  <!-- Vendor CSS Files -->
+  <link href="<?=base_url()?>assets/frontend/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="<?=base_url()?>assets/frontend/vendor/aos/aos.css" rel="stylesheet">
+  <link href="<?=base_url()?>assets/frontend/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?=base_url()?>assets/frontend/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="<?=base_url()?>assets/frontend/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="<?=base_url()?>assets/frontend/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="<?=base_url()?>assets/frontend/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="<?=base_url()?>assets/frontend/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="<?=base_url()?>assets/frontend/css/style.css" rel="stylesheet">
 
-    <!-- Animate.css -->
-    <link href="<?= base_url() ?>assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/animate.css">
-    <!-- Icomoon Icon Fonts-->
-    <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/icomoon.css">
-    <!-- Bootstrap  -->
-    <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/bootstrap.css">
-
-    <!-- Magnific Popup -->
-    <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/magnific-popup.css">
-
-    <!-- Owl Carousel  -->
-    <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/owl.theme.default.min.css">
-
-    <!-- Flexslider  -->
-    <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/flexslider.css">
-
-    <!-- Pricing -->
-    <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/pricing.css">
-
-    <!-- Theme style  -->
-    <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/style.css">
-
-    <!-- Modernizr JS -->
-    <script src="<?= base_url() ?>assets/frontend/js/modernizr-2.6.2.min.js"></script>
-    <!-- FOR IE9 below -->
-    <!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
+  <!-- =======================================================
+  * Template Name: Company
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
 
-    <div class="fh5co-loader"></div>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
 
-    <div id="page">
-        <nav class="fh5co-nav" role="navigation">
-            <div class="top-menu">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-2">
-                            <div id="fh5co-logo"><a href="/"><i class="icon-study"></i>SMP37</a></div>
-                        </div>
-                        <div class="col-xs-10 text-right menu-1">
-                            <ul>
-                                <li class="active"><a href="<?= base_url('home-page') ?>">Home</a></li>
-                                <li><a href="<?= base_url('profile-page') ?>">Profil</a></li>
-                                <li><a href="<?= base_url('visi-page') ?>">Visi dan Misi</a></li>
-                                <li><a href="<?= base_url('struktur-page') ?>">Struktur Organisasi</a></li>
-                                <li><a href="<?= base_url('galeri-page') ?>">Galeri</a></li>
-                                <li><a href="<?= base_url('pengajar-page') ?>">Pengajar</a></li>
-                                <li><a href="<?= base_url('artikel-page') ?>">Artikel</a></li>
-                                <li><a href="<?= base_url('kontak-page') ?>">Kontak</a></li>
-                                <li class="btn-cta"><a href="<?= base_url('login') ?>"><span>Login</span></a></li>
-                            </ul>
-                        </div>
-                    </div>
+      <h1 class="logo me-auto"><a href="<?= base_url('home-page') ?>"><span>Com</span>pany</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="<?=base_url()?>assets/frontend/img/logo.png" alt="" class="img-fluid"></a>-->
 
-                </div>
-            </div>
-        </nav>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a href="<?= base_url('home-page') ?>" class="active">Beranda</a></li>
+
+          <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+                <li><a href="<?= base_url('visi-page')?>">Visi dan Misi</a></li>
+                <li><a href="<?= base_url('struktur-page')?>">Struktur Organisasi</a></li>
+                <li><a href="<?= base_url('sejarah-page')?>">Sejarah</a></li>
+            </ul>
+          </li>
+
+          <li><a href="<?= base_url('artikel-page')?>">Berita</a></li>
+          <li><a href="<?= base_url('galeri-page')?>">Galeri</a></li>
+          <li class="dropdown"><a href="#"><span>Layanan</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="about.html">Penerbitan Surat Pengantar Kartu Keluarga (KK)</a></li>
+              <li><a href="about.html">Penerbitan Surat Pengantar e-KTP</a></li>
+              <li><a href="team.html">Penerbitan Surat Keterangan Kematian</a></li>
+              <li><a href="team.html">Penerbitan Surat Keterangan Kelahiran</a></li>
+              <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li> -->
+            </ul>
+          </li>
+          <li><a href="<?= base_url('kontak-page') ?>">Tentang</a></li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="header-social-links d-flex">
+        <a href="#" class="twitter"><i class="bu bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bu bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bu bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bu bi-linkedin"></i></i></a>
+      </div>
+
+    </div>
+  </header><!-- End Header -->

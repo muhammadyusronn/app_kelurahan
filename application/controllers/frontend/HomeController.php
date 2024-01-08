@@ -8,7 +8,6 @@ class HomeController extends MY_Controller{
     public function index()
     {
         $data['title'] = 'SMP N 37 OKU';
-        $data['total_pengajar'] = COUNT($this->PengajarModel->get());
         $this->renderpage('frontend/home', $data);
     }
 }

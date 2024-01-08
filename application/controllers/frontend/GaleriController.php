@@ -10,6 +10,7 @@ class GaleriController extends MY_Controller{
     {
         $data['title'] = 'SMP N 37 OKU';
         $data['galeri'] = $this->GaleriModel->get();
+        // $this->dump($data);exit;
         $this->renderpage('frontend/galeri', $data);
     }
 }

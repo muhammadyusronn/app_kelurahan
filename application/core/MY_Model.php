@@ -158,11 +158,13 @@ class MY_Model extends CI_Model
         return $query->result();
     }
 
-    public function get_data_join($tables, $jcond)
+    public function get_data_join($tables, $jcond,$cond=null)
     {
         $this->db->select('*');
         for ($i = 0; $i < count($tables); $i++)
             $this->db->join($tables[$i], $jcond[$i]);
+        if (is_array($cond))
+            $this->db->where($cond);
         return $this->db->get($this->data['table_name'])->result();
     }
 

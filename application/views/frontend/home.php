@@ -1,177 +1,97 @@
-<aside id="fh5co-hero">
-    <div class="flexslider">
-        <ul class="slides">
-            <li style="background-image: url(<?= base_url(); ?>assets/frontend/images/img_bg_1.jpeg);">
-                <div class="overlay-gradient"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2 text-center slider-text">
-                            <div class="slider-text-inner">
-                                <h1>SMP Negeri 37 OKU</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li style="background-image: url(<?= base_url(); ?>assets/frontend/images/img_bg_2.jpeg);">
-                <div class="overlay-gradient"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2 text-center slider-text">
-                            <div class="slider-text-inner">
-                                <h1>SMP Negeri 37 OKU</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li style="background-image: url(<?= base_url(); ?>assets/frontend/images/img_bg_3.jpeg);">
-                <div class="overlay-gradient"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2 text-center slider-text">
-                            <div class="slider-text-inner">
-                                <h1>SMP Negeri 37 OKU</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-</aside>
+<style> 
+        .darkened-image { 
+            filter: brightness(70%); 
+        } 
+    </style> 
+<div class="header-social-links d-flex">
+        <a href="#" class="twitter"><i class="bu bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bu bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bu bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bu bi-linkedin"></i></i></a>
+      </div>
 
-<div id="fh5co-course-categories">
-    <div class="container">
-        <div class="row animate-box">
-            <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-                <h2>Fasilitas Kami</h2>
-                <!-- <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p> -->
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 col-sm-6 text-center animate-box">
-                <div class="services">
-                    <span class="icon">
-                        <i class="icon-shop"></i>
-                    </span>
-                    <div class="desc">
-                        <h3><a href="#">Kantin</a></h3>
-                        <p>SMP Negeri 37 OKU memiliki fasilitas kantin yang bersih dan makanan yang higienis</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 text-center animate-box">
-                <div class="services">
-                    <span class="icon">
-                        <i class="icon-heart4"></i>
-                    </span>
-                    <div class="desc">
-                        <h3><a href="#">Ruang Kesehatan (UKS)</a></h3>
-                        <p>SMP Negeri 37 OKU memiliki fasilitas ruang kesehatan yang memiliki ketersediaan obat untuk murid</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 text-center animate-box">
-                <div class="services">
-                    <span class="icon">
-                        <i class="icon-lab2"></i>
-                    </span>
-                    <div class="desc">
-                        <h3><a href="#">Laboratorium Science</a></h3>
-                        <p>SMP Negeri 37 OKU memiliki fasilitas ruang laboratorium untuk science seperti bilogi dan fisika</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 text-center animate-box">
-                <div class="services">
-                    <span class="icon">
-                        <i class="icon-world"></i>
-                    </span>
-                    <div class="desc">
-                        <h3><a href="#">Lab. Komputer &amp; Internet</a></h3>
-                       <p>SMP Negeri 37 OKU memiliki fasilitas laboratorium komputer dan jaringan internet untuk menunjang kegiatan belajar</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-</div>
+  </header><!-- End Header -->
 
-<!-- <div id="fh5co-counter" class="fh5co-counters" style="background-image: url(<?= base_url(); ?>assets/frontend/images/img_bg_4.jpg);" data-stellar-background-ratio="0.5">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6 text-center animate-box">
-                        <span class="icon"><i class="icon-world"></i></span>
-                        <span class="fh5co-counter js-counter" data-from="0" data-to="3297" data-speed="5000" data-refresh-interval="50"></span>
-                        <span class="fh5co-counter-label">Foreign Followers</span>
-                    </div>
-                    <div class="col-md-3 col-sm-6 text-center animate-box">
-                        <span class="icon"><i class="icon-study"></i></span>
-                        <span class="fh5co-counter js-counter" data-from="0" data-to="3700" data-speed="5000" data-refresh-interval="50"></span>
-                        <span class="fh5co-counter-label">Students Enrolled</span>
-                    </div>
-                    <div class="col-md-3 col-sm-6 text-center animate-box">
-                        <span class="icon"><i class="icon-bulb"></i></span>
-                        <span class="fh5co-counter js-counter" data-from="0" data-to="5034" data-speed="5000" data-refresh-interval="50"></span>
-                        <span class="fh5co-counter-label">Classes Complete</span>
-                    </div>
-                    <div class="col-md-3 col-sm-6 text-center animate-box">
-                        <span class="icon"><i class="icon-head"></i></span>
-                        <span class="fh5co-counter js-counter" data-from="0" data-to="<?= $total_pengajar ?>" data-speed="5000" data-refresh-interval="50"></span>
-                        <span class="fh5co-counter-label">Guru</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
-<div id="fh5co-testimonial">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row animate-box">
-            <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-                <h2><span>Testimonials</span></h2>
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item darkened-image active" style="background-image: url(<?=base_url()?>assets/frontend/img/slide/S1.jpeg);">
+          <div class="carousel-container">
+            <div class="carousel-content animate__animated animate__fadeInUp">
+              <h2>Selamat Datang Di Website Kelurahan Talang Kelapa</h2>
             </div>
+          </div>
         </div>
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row animate-box">
-                    <div class="owl-carousel owl-carousel-fullwidth">
-                        <div class="item">
-                            <div class="testimony-slide active text-center">
-                                <div class="user" style="background-image: url(<?= base_url() ?>assets/img/herder.png);"></div>
-                                <span>H. Herman Deru, S.H., M.M<br><small>Gubernur Sumatra Selatan</small></span>
-                                <blockquote>
-                                    <p>&ldquo;SMP Negeri 37 OKU merupakan salah satu SMP terbaik yang berada di wilayah OKU.&rdquo;</p>
-                                </blockquote>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony-slide active text-center">
-                                <div class="user" style="background-image: url(<?= base_url() ?>assets/img/teddy.jpeg);"></div>
-                                <span>H. Teddy Meilwansyah, S.STP, M.M, M.Pd<br><small>PJ. Bupati OKU</small></span>
-                                <blockquote>
-                                    <p>&ldquo;SMP Negeri 37 OKU memiliki tenaga pengajar yang sangat baik dan mampu mendistribusikan ilmu dengan baik ke murid&rdquo;</p>
-                                </blockquote>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony-slide active text-center">
-                                <div class="user" style="background-image: url(<?= base_url() ?>assets/img/yusron.jpeg);"></div>
-                                <span>Muhammad Yusron H<br><small>Alumni</small></span>
-                                <blockquote>
-                                    <p>&ldquo;SMP Negeri 37 OKU merupakan salah satu SMP terbaik yang berada di wilayah OKU. Bukan cuma membuat murid menjadi cerdas, gurunya mampu membentuk muridnya menjadi insan yang ber-AKHLAK&rdquo;</p>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item darkened-image" style="background-image: url(<?=base_url()?>assets/frontend/img/slide/S2.jpeg);">
+          <div class="carousel-container">
+            <div class="carousel-content animate__animated animate__fadeInUp">
+              <h2>Selamat Datang Di Website Kelurahan Talang Kelapa</h2>
             </div>
+          </div>
         </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item darkened-image" style="background-image: url(<?=base_url()?>assets/frontend/img/slide/S3.jpeg);">
+          <div class="carousel-container">
+            <div class="carousel-content animate__animated animate__fadeInUp">
+             <h2>Selamat Datang Di Website Kelurahan Talang Kelapa</h2>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
     </div>
-</div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about-us" class="about-us">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row content">
+          <div class="col-lg-6" data-aos="fade-right">
+            <h2>Eum ipsam laborum deleniti velitena</h2>
+            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen jonee trave</h3>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
+            <p>
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequa</li>
+              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
+              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</li>
+            </ul>
+            <p class="fst-italic">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+  </main><!-- End #main -->
+
