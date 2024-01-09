@@ -51,7 +51,7 @@
                 <a class="link" href="<?= base_url('dash') ?>">
                     <a class="nav-link brand" data-toggle="dropdown">
                         <!-- <img src="<?= base_url() ?>assets/img/smp.png" style="max-width:25px;" /> -->
-                        <span class="ml-1"></span>SMPN 37 OKU
+                        <span class="ml-1"></span>TLG KELAPA
                     </a>
                     <span class="brand-mini">
                         <img src="<?= base_url() ?>assets/img/smp.png" style="max-width:30px;" />

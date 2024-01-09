@@ -76,8 +76,9 @@
           <h3 class="sidebar-title">Categories</h3>
           <div class="sidebar-item categories">
             <ul>
-              <li><a href="#">Pengumuman</a></li>
-              <li><a href="#">Berita</a></li>
+              <li><a href="<?= base_url('artikel-page')?>">All</a></li>
+              <li><a href="<?= base_url('artikel-page?cat=1')?>">Pengumuman</a></li>
+              <li><a href="<?= base_url('artikel-page?cat=2')?>">Berita</a></li>
             </ul>
           </div><!-- End sidebar categories-->
 

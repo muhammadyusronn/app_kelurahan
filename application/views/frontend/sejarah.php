@@ -5,9 +5,9 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Visi dan Misi</h2>
+          <h2>Sejarah</h2>
           <ol>
-            <li>Visi dan Misi</li>
+            <li>Sejarah</li>
           </ol>
         </div>
 
@@ -24,13 +24,13 @@
 
             <article class="entry entry-single">
 
-              <div class="entry-img">
+            <h2 class="entry-title">
+                <a><?= isset($konten) ? $konten[0]->judul : "Undefined" ?></a>
+            </h2>
+
+              <div class="entry-title">
                 <img src="<?= base_url() ?>uploads/file-konten/<?= isset($konten) ? $konten[0]->file : "Undefined" ?>" alt="File Not Found" class="img-fluid">
               </div>
-
-              <h2 class="entry-title">
-                <a><?= isset($konten) ? $konten[0]->judul : "Undefined" ?></a>
-              </h2>
 
               <div class="entry-content">
               <?= isset($konten) ? $konten[0]->isi : "Undefined" ?>

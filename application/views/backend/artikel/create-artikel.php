@@ -54,6 +54,21 @@
                         </div>
                     <?php } ?>
                     <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Kategori</label>
+                        <div class="col-sm-10">
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="jenis_artikel" value="1" <?= ((isset($artikel)) && ($artikel[0]->jenis_artikel == "1")) ? "checked" : "checked" ?>>Berita
+                                </label>
+                            </div>
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="jenis_artikel" value="2" <?= ((isset($artikel)) && ($artikel[0]->jenis_artikel == "2")) ? "checked" : "" ?>>Pengumuman
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Status</label>
                         <div class="col-sm-10">
                             <div class="form-check-inline">

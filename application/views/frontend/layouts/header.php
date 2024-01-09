@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Company Bootstrap Template - Index</title>
+  <title><?= $title; ?></title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -44,7 +44,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="<?= base_url('home-page') ?>"><span>Com</span>pany</a></h1>
+      <h1 class="logo me-auto"><a href="<?= base_url('home-page') ?>"><span>KELURAHAN</span> TALANG KELAPA</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="<?=base_url()?>assets/frontend/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -64,10 +64,13 @@
           <li><a href="<?= base_url('galeri-page')?>">Galeri</a></li>
           <li class="dropdown"><a href="#"><span>Layanan</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="about.html">Penerbitan Surat Pengantar Kartu Keluarga (KK)</a></li>
+              <?php foreach($layanan as $i): ?>
+                <li><a href="<?= base_url('layanan-page?id=').$i->id.'&name='.$i->nama_layanan;?>"><?= $i->nama_layanan; ?></a></li>
+              <?php endforeach; ?>
+              <!-- <li><a href="about.html">Penerbitan Surat Pengantar Kartu Keluarga (KK)</a></li>
               <li><a href="about.html">Penerbitan Surat Pengantar e-KTP</a></li>
               <li><a href="team.html">Penerbitan Surat Keterangan Kematian</a></li>
-              <li><a href="team.html">Penerbitan Surat Keterangan Kelahiran</a></li>
+              <li><a href="team.html">Penerbitan Surat Keterangan Kelahiran</a></li> -->
               <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">Deep Drop Down 1</a></li>
@@ -80,6 +83,7 @@
             </ul>
           </li>
           <li><a href="<?= base_url('kontak-page') ?>">Tentang</a></li>
+          <li><a href="<?= base_url('login') ?>">Login</a></li>
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

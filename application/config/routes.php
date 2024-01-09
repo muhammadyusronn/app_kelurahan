@@ -35,12 +35,14 @@ $route['artikel/update/(:num)']           = 'backend/ArtikelController/edit/$1';
 $route['home-page']                     = 'frontend/HomeController/index';
 $route['profile-page']                  = 'frontend/AboutController/index';
 $route['visi-page']                     = 'frontend/VisiController/index';
+$route['sejarah-page']                  = 'frontend/SejarahController/index';
 $route['struktur-page']                 = 'frontend/StrukturController/index';
 $route['pengajar-page']                 = 'frontend/TeacherController/index';
 $route['artikel-page']                  = 'frontend/ArtikelController/index';
 $route['artikel-detail/(:num)']         = 'frontend/ArtikelController/detail/$1';
 $route['galeri-page']                   = 'frontend/GaleriController/index';
 $route['kontak-page']                   = 'frontend/KontakController/index';
+$route['layanan-page']                   = 'frontend/LayananController/form';
 
 
 $route['default_controller'] = 'welcome';

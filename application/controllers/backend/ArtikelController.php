@@ -85,6 +85,7 @@ class ArtikelController extends MY_Controller
                 $data = [
                 'judul' => $this->POST('judul'),
                 'isi' => $this->POST('isi'),
+                'jenis_artikel' => $this->POST('jenis_artikel'),
                 'is_published' => $this->POST('is_published'),
                 'created_by'=>$this->session->userdata('token')['id_user']
                 ];
@@ -101,6 +102,8 @@ class ArtikelController extends MY_Controller
         } else {
             $data['title'] = 'Update artikel';
             $data['artikel'] = $this->ArtikelModel->get(['id' => $id]);
+            // $this->dump($data);
+            // exit;
             $this->render('backend/artikel/create-artikel', $data);
         }
     }

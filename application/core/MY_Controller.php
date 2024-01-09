@@ -161,6 +161,7 @@ class MY_Controller extends CI_Controller
     }
     protected function renderpage($view, $data = '')
     {
+        // $this->dump($data);exit;
         $this->load->view('frontend/layouts/header', $data);
         $this->load->view($view, $data);
         $this->load->view('frontend/layouts/footer');
