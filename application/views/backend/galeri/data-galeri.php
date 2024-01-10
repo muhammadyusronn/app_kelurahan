@@ -20,6 +20,16 @@
                         <label class="sr-only">File Galeri</label>
                         <input type="file" class="form-control" name="file_foto">
                     </div>
+                    <div class="form-group mx-sm-3 mb-2">
+                        <input type="text" class="form-control" name="name" placeholder="Judul">
+                    </div>
+                    <div class="form-group mx-sm-4 mb-2">
+                        <select class="form-control" name="filter" >
+                            <option selected disabled>Pilih Kategori</option>
+                            <option value="filter-internal">Kegiatan Internal</option>
+                            <option value="filter-eksternal">Kegiatan Eksternal</option>
+                        </select>
+                    </div>
                     <input type="submit" name="submit" class="btn btn-primary mb-2">
                 </form>
             </div>
@@ -34,12 +44,16 @@
                     <thead>
                         <tr>
                             <th>Galeri</th>
+                            <th>Judul</th>
+                            <th>Kategori</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
                             <th>Galeri</th>
+                            <th>Judul</th>
+                            <th>Kategori</th>
                             <th></th>
                         </tr>
                     </tfoot>
@@ -50,6 +64,8 @@
                                 <td>
                                     <img class="img-fluid" src="<?= base_url('uploads/galeri/').$i->file; ?>" style="max-width:250px">
                                 </td>
+                                <td><?= $i->name ?></td>
+                                <td><?= ($i->filter == "filter-internal") ? "Kegiatan Internal" : "Kegiatan Eksternal" ?></td>
                                 <td>
                                     <a href="<?= base_url('backend/GaleriController/destroy/') . $i->id ?>" class="btn btn-danger" title="HAPUS" onclick="javascript: return confirm('anda yakin menghapus data?')"><i class="fa fa-trash"></i></a>
                                 </td>

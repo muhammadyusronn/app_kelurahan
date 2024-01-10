@@ -42,7 +42,9 @@ $route['artikel-page']                  = 'frontend/ArtikelController/index';
 $route['artikel-detail/(:num)']         = 'frontend/ArtikelController/detail/$1';
 $route['galeri-page']                   = 'frontend/GaleriController/index';
 $route['kontak-page']                   = 'frontend/KontakController/index';
-$route['layanan-page']                   = 'frontend/LayananController/form';
+$route['layanan-page']                  = 'frontend/LayananController/form';
+$route['layanan/create']                = 'frontend/LayananController/form';
+
 
 
 $route['default_controller'] = 'welcome';

@@ -17,23 +17,24 @@
       <div class="container">
         <div class="row mt-5 justify-content-center" data-aos="fade-up">
           <div class="col-lg-10">
-            <form action="" method="post" role="form" class="php-email-form">
+            <form action="<?= base_url('layanan/create')?>" method="post" enctype="multipart/form-data" >
+              <input type="hidden" name="id_layanan" value="<?= $this->input->get('id')?>">
                 <?php foreach($persyaratan_layanan as $i): ?>
                 <div class="form-group mt-3">
                     <label><?= $i->nama_field; ?></label>
                     <?php if($i->type == '1') { ?>
                         <input type="text" class="form-control" name="<?= $i->code?>" id="<?= $i->code ?>" placeholder="<?= $i->nama_field ?>" <?= ($i->is_mandatory == '1') ? 'required' : ''?>>
                     <?php }else if($i->type == "2"){ ?>
-                        <input type="file" name="subject" id="subject" placeholder="Subject" required>
+                        <input type="file" name="<?= $i->code?>" id="<?= $i->code ?>"  placeholder="Subject" required>
                     <?php } ?>
                 </div>
               <?php endforeach; ?>
-              <div class="my-3">
+              <!-- <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              </div> -->
+              <input type="submit" name="submit" class="btn btn-success" value="SUBMIT">
             </form>
           </div>
         </div>

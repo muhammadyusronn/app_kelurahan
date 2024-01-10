@@ -26,10 +26,9 @@
           <div class="col-lg-4 col-md-6 footer-links">
             <h4>Layanan Kami</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Penerbitan Surat Pengantar Kartu Keluarga (KK)</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Penerbitan Surat Pengantar e-KTP</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Penerbitan Surat Keterangan Kematian</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Penerbitan Surat Keterangan Kelahiran</a></li>
+            <?php foreach($layanan as $i): ?>
+                <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('layanan-page?id=').$i->id.'&name='.$i->nama_layanan;?>"><?= $i->nama_layanan; ?></a></li>
+              <?php endforeach; ?>
             </ul>
           </div>
 

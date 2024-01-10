@@ -41,6 +41,8 @@ class GaleriController extends MY_Controller
             $this->db->trans_start();
             $this->GaleriModel->insert([
                 'file' => $data['upload_data']['file_name'],
+                'name' => $this->POST('name'),
+                'filter' => $this->POST('filter'),
                 'created_by' => $this->session->userdata('token')['id_user'],
             ]);
             $this->db->trans_complete();
