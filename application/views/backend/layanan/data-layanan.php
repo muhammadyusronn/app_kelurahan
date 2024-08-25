@@ -56,7 +56,10 @@
                                     ?>
                                 </td>
                                 <td>
-                                    <a href="<?= base_url('layanan/detail/') . $i->id; ?>" class="btn btn-info" title="DETAIL"><i class="fa fa-eye"></i></a>
+                                    <a href="<?= base_url('layanan/detail/') . $i->id; ?>" class="btn btn-xs btn-info" title="DETAIL"><i class="fa fa-eye"></i></a>
+                                    <?php if($i->status == "1"){ ?>
+                                    <a href="<?= base_url('dokumen/') . $i->id; ?>" class="btn btn-xs btn-success" title="DOWNLOAD DOKUMEN"><i class="fa fa-download"></i></a>
+                                    <?php } ?>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

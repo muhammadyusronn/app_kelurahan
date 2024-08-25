@@ -12,7 +12,9 @@
 	},
 	"require": {
 		"php": ">=5.3.7",
-		"vlucas/phpdotenv": "^3.6"
+		"vlucas/phpdotenv": "^3.6",
+		"mpdf/mpdf": "^8.2",
+		"chillerlan/php-qrcode": "^5.0"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
