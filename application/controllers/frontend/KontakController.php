@@ -9,7 +9,7 @@ class KontakController extends MY_Controller{
 
     public function index()
     {
-        $data['title'] = 'Kelurahan Talang Kelapa';
+        $data['title'] = 'Kecamatan Jakabaring';
         $data['layanan'] = $this->LayananModel->get(['is_active'=>'1']);
         $this->renderpage('frontend/kontak', $data);
     }

@@ -47,7 +47,7 @@
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Isi</label>
                         <div class="col-sm-10">
-                            <textarea id="editor" class="form-control" name="isi"><?= isset($konten) ? $konten[0]->isi : '' ?></textarea>
+                            <textarea class="form-control" name="isi"><?= isset($konten) ? $konten[0]->isi : '' ?></textarea>
                         </div>
                     </div>
                     <div class="form-group row">

@@ -7,6 +7,7 @@ class LayananController extends MY_Controller{
         $this->load->model('BerkasPengajuanModel');
         $this->load->model('LayananModel');
         $this->load->model('PersyaratanLayananModel');
+        
     }
 
     public function form()
@@ -70,7 +71,8 @@ class LayananController extends MY_Controller{
                 redirect('home-page');
             }
         }else{
-            $data['title'] = 'Kelurahan Talang Kelapa';
+            $data['token'] = $this->session->userdata('token');
+            $data['title'] = 'Kecamatan Jakabaring';
             $data['sub_title'] = $this->input->get('name');
             $data['layanan'] = $this->LayananModel->get();
             $data['persyaratan_layanan'] = $this->PersyaratanLayananModel->get_data_join(['field_persyaratan'],['field_persyaratan.id=persyaratan_layanan.id_persyaratan'],['persyaratan_layanan.id_layanan='=>$this->input->get('id')]);

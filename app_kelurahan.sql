@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 10 Jan 2024 pada 14.47
+-- Waktu pembuatan: 25 Agu 2024 pada 08.17
 -- Versi server: 10.4.27-MariaDB
 -- Versi PHP: 7.4.33
 
@@ -43,10 +43,7 @@ CREATE TABLE `artikel` (
 --
 
 INSERT INTO `artikel` (`id`, `judul`, `isi`, `created_at`, `created_by`, `is_published`, `file`, `jenis_artikel`) VALUES
-(2, 'Ekstrakulikuler Basket', '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>\r\n<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>\r\n<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>', '2024-01-01 15:57:28', 1, 1, 'basket.jpeg', 1),
-(3, 'Ekstrakulikuler Pramuka', '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>', '2023-12-17 15:57:46', 1, 1, 'pramuka.jpeg', 2),
-(4, 'Ekstrakulikuler Memanah', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '2023-09-03 15:58:03', 1, 1, 'memanah.jpeg', 2),
-(5, 'Ekstrakulikuler Programming', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '2023-05-17 15:58:18', 1, 1, 'programming.jpeg', 1);
+(2, 'Ratu Dewa Lantik Puluhan RT RW di Jakabaring, Upayakan Anggaran Naik', 'Palembang - Sebanyak 68 Rukun Tetangga (RT) dan 19 Rukun Warga (RW) yang baru dilantik di Kecamatan Jakabaring, mendapatkan arahan dari Sekertaris Daerah (Sekda) kota Palembang Ratu Dewa. \n\n \n\nArahan tersebut, mengenai bagaimana cara mereka memberikan edukasi kepada masyarakat untuk tetap menjaga lingkungan sekitar untuk tetap bersih.\n\nHal ini dibernarkanya usai melakukan pelantikan RT RW di kulurahan 15 ulu, bahwa fungsi RT dilingkungan masyarakat sangat berperan penting seperti mendamaikan warga yang bermasalah serta mendukung kegiatan pemerintah.\n\n \n\n\"Maka dari itu dalam menjalankan tugasnya, Pemkot Palembang sangat mengapresiasi sekali mereka yang telah berperan menyukseskan program Pemerintah sehingga berjalan dengan lancar.\n\n \n\nSelain itu juga kami telah membahas dan mengusulkan masalah kenaikan anggaran RT, karena sudah lama tidak naik. Selain itu juga pembahasan ini sudah di bawa ke  DPR dan Badan Pengawasan Keuangan dan Pembangunan (BPKP) untuk dipertimbangkan,\"jelasnya selasa (23/7).\n\n \n\nIa berharap agar kinerja RT dan RW bisa lebih produktif dalam memberikan edukasi serta pembelajaran kepada masyarakat untuk hidup bersih.\n\n\"Saya mengajak mereka untuk bekerja dengan sepenuh hati, sehingga keluhan dan aspirasi masyarakat yang ada dilingkungan sekitar bisa dijalankan,\" tutupnya.', '2024-01-01 15:57:28', 1, 1, 'IMG_20240723_WA_0164_180b3314e2.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -79,7 +76,7 @@ CREATE TABLE `field_persyaratan` (
 
 INSERT INTO `field_persyaratan` (`id`, `nama_field`, `code`) VALUES
 (1, 'Nama Pemohon', 'nama_pemohon'),
-(2, 'TTL', 'ttl'),
+(2, 'Tempat Tanggal Lahir', 'ttl'),
 (3, 'Alamat', 'alamat'),
 (4, 'Nomor HP', 'nomor_hp'),
 (5, 'Nomor Identitas Kependudukan', 'nik'),
@@ -87,16 +84,16 @@ INSERT INTO `field_persyaratan` (`id`, `nama_field`, `code`) VALUES
 (7, 'Tanggal Kematian', 'tanggal_kematian'),
 (8, 'Pengantar RT', 'pengantar_rt'),
 (9, 'Kartu Keluarga', 'kk'),
-(10, 'Kartu Tanda Penduduk', 'ktp'),
-(11, 'Bukti Lunas PPB', 'bukti_ppb'),
-(12, 'Izin Tetangga', 'izin_tetangga'),
-(13, 'Keterangan Kematian', 'keterangan_kematian'),
-(14, 'Pernyataan Pemohon', 'pernyataan_pemohon'),
-(15, 'Foto Surat Tanah', 'surat_tanah'),
-(16, 'Surat Cerai', 'surat_cerai'),
-(17, 'Keterangan Surat Pindah dari Capil', 'surat_pindah'),
-(18, 'Kartu Keluarga Seluruh Ahli Waris', 'kk_ahli_waris'),
-(19, 'Buku Nikah', 'buku_nikah');
+(10, 'Berkas Kartu Tanda Penduduk', 'ktp'),
+(11, 'Berkas Surat Tanah / atas Hak Tanah Usaha', 'berkas_surat_tanah'),
+(22, 'Berkas Surat Permohonan Bermaterai Rp. 10.000', 'berkas_permohonan'),
+(23, 'Berkas Surat Pernyataan Tanah Tidak Sengketa Bermateri Rp. 10.000 diketahui RT setempat', 'pernyataan_spht'),
+(24, 'Berkas Surat Pernyataan Waris', 'surat_waris'),
+(25, 'Berkas Surat Keterangan Kehilangan (Bila surat tanah hilang)', 'surat_kehilangan'),
+(26, 'Berkas Bukti Pembayaran PBB Tahun Terakhir', 'pembayaran_pbb'),
+(27, 'Berkas Surat Pernyataan Ahli Waris dan Kuasa dari Lurah', 'surat_ahli_waris'),
+(28, 'Berkas Kartu Keluarga', 'berkas_kk'),
+(29, 'Berkas Surat Keterangan Kematian', 'surat_kematian');
 
 -- --------------------------------------------------------
 
@@ -118,13 +115,12 @@ CREATE TABLE `galeri` (
 --
 
 INSERT INTO `galeri` (`id`, `file`, `created_at`, `created_by`, `name`, `filter`) VALUES
-(4, 'DSC_0069.jpeg', '2023-05-14 16:50:30', 1, 'Gambar 1', 'filter-internal'),
-(5, 'images_-_2020-09-08T164150_808.jpeg', '2023-05-14 16:50:41', 1, 'Gambar 2', 'filter-internal'),
-(6, 'maxresdefault.jpeg', '2023-05-14 16:50:47', 1, 'Gambar 3', 'filter-internal'),
-(7, 'maxresdefault1.jpeg', '2023-05-14 16:50:54', 1, 'Gambar 4', 'filter-internal'),
-(8, 'murid-smp.jpeg', '2023-05-14 16:51:01', 1, 'Gambar 5', 'filter-eksternal'),
-(9, '1.jpeg', '2023-05-14 16:52:20', 1, 'Gambar 6', 'filter-eksternal'),
-(11, 'slide-1.jpg', '2024-01-10 12:31:13', 1, 'Gambar Meeting', 'filter-eksternal');
+(12, 'IMG_1635.jpg', '2024-08-23 16:58:10', 1, 'Memperingati HUT RI', 'filter-internal'),
+(13, 'IMG_1632.jpg', '2024-08-23 16:59:03', 1, 'Memperingati HUT RI', 'filter-internal'),
+(14, 'IMG_1633.jpg', '2024-08-23 16:59:12', 1, 'Memperingati HUT RI', 'filter-internal'),
+(15, 'IMG_1625.jpg', '2024-08-23 16:59:23', 1, 'Kegiatan Gotong Royonh', 'filter-eksternal'),
+(16, 'IMG_1626.jpg', '2024-08-23 16:59:32', 1, 'Kegiatan Gotong Royonh', 'filter-eksternal'),
+(17, 'IMG_1624.jpg', '2024-08-23 16:59:57', 1, 'Kegiatan Gotong Royonh', 'filter-eksternal');
 
 -- --------------------------------------------------------
 
@@ -190,10 +186,10 @@ CREATE TABLE `konten` (
 --
 
 INSERT INTO `konten` (`id`, `jenis_konten`, `judul`, `isi`, `created_at`, `created_by`, `is_published`, `file`) VALUES
-(10, 3, 'Profil Kelurahan Talang Kelapa', '<p>Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat cauctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat cauctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per Mauris in erat justo.</p>', '2023-05-11 11:37:22', 1, 1, 'smp.jpg'),
-(11, 1, 'Visi dan Misi Kelurahan Talang Kelapa', '<p><strong>V I S I </strong></p>\r\n<p>Menciptakan Insan Berprestasi, Berbudaya dan Bertaqwa</p>\r\n<p><strong>M I S I</strong></p>\r\n<ol>\r\n<li>Menjalankan nilai nilai agama dan Berperilaku akhlakul Karimah Dalam Kehidupan Sehari Hari.</li>\r\n<li>Melaksanakan Pembelajaran Aktif, kreatif, efektif dan Menyenangkan untuk Mengembangkan potensi peserta Didik.</li>\r\n<li>Menumbuhkan semangat Berprestasi Kepada Keseluruh Warga Sekolah.</li>\r\n<li>Membimbing dan Mengembangkan Bakat Dan Minat Peserta Didik.</li>\r\n<li>Terlaksananya Program Ekstrakulikuler untuk menghasilkan siswa yang Berprestasi dan Bermanfaat bagi Kehidupan Sehari Hari.</li>\r\n<li>Menerapkan Manajemen Berbasis Sekolah Yang Partisifatif Dengan Melibatkan Seluruh Warga Sekolah.</li>\r\n<li>Mengembangkan Hasil Karya Yang dimiliki Peserta Dididk.</li>\r\n<li>Meningkatkan Kesadaran Untuk Memelihara Lingkungan.</li>\r\n</ol>', '2023-05-11 11:40:07', 1, 1, 'visi-dan-misi.jpeg'),
-(12, 2, 'Struktur Organisasi Kelurahan Talang Kelapa', '<p>Lorem issum</p>', '2023-05-11 11:54:09', 1, 1, 'org8.jpg'),
-(13, 6, 'Sejarah Kelurahan Talang Kelapa', '<p>Pada zaman penjajahan kawasan Kecamatan Talang Kelapa tercatat wilayahnya dikendalikan 3 marga besar, yakni, Gasing, Kenten dan Tanjung Lago. Seiring masa kemerdekaan maka kendali pimpinan kawasan dari marga diubah menjadi kecamatan.</p>\r\n<p>Awalnya Kecamatan Talang Kelapa adalah bagian dari Kabupaten Musi Banyuasin Banyuasin, wilayahnya mencakup kawasan Talang Kelapa, Tanjung Lago, dan sembilan kelurahan yang sekarang ada di wilayah kota Palembang, yakni Kelurahan Talang Betutu, Alang Alang Lebar, Srijaya, Sukamaju, Sako, Sukarame, Talang Jambi, Talang Kelapa. Sebelum dimekarkan beberapa kawasan Kecamatan Induk Talang Kelapa tercatat memiliki 19 desa, dan pusat pemerintahan berada di Kelurahan Sukareme dimana sekarang masuk dalam wilayah Palembang.</p>\r\n<p>Pengambil alihan sembilan desa di wilayah Musi Banyuasin ke Kota Palembang sekitar tahun 1998, maka pusat pemerintahan Kecamatan dipindahkan pemerintah Kabupaten Muba ke kawasan Desa Sukajadi. Pada tahun 2002 Kabupaten Musi Banyuasin mulai dimekarkan menjadi Kabupaten Banyuasin, pada saat itu Kecamatan Talang Kelapa masuk bagian dari Kecamatan pemekaran Kabupaten Banyuasin.</p>\r\n<p>Di masa-masa awal pemekaran Kabupaten Banyuasin, seluruh kawasan Tanjung Lago. merupakan bagian dari Kecamatan Talang Kelapa. Namun pada pemerintahan Kabupaten Banyuasin, kecamatan ini dimekarkan dua wilayah, Kecamatan Talang Kelapa dan Kecamatan Tanjung Lago. Pasca pemekaran kecamatan Talang Kelapa, menyisahkan 7 wilayah desa dan kelurahan, yakni, Kelurahan Kenten, Desa Gasing, Kelurahan Sukajadi, Kelurahan Sukamoro, Kelurahn Air Batu, Desa Pangkalan Benteng dan Desa Sungai Rengit.</p>\r\n<p>Pada tahun 2007 Kecamatan Talang Kelapa sejumlah wilayah kelurahan dan desa di kecamatan ini mulai di mekarkan, yakni Kelurahan Kenten dimekarkan menjadi 3 wilayah, Kelurahan Talang Keramat, Desa Kenten Laut dan Kelurahan Kenten. Di bagian barat Kelurahan Sukajadi dimekarkan menjadi 3 wilayah, Kelurahan Tanah Mas, Desa Talang Buluh dan Kelurahan Sukajadi. Pemekaran terakhir pada 2009 yakni Desa Sungai Rengit menjadi dua wilayah, Sungai Rengit dan Sungai Rengit Murni. Dari jumlah pemekaran desa dan kelurahan yang dilakukan secara bertahap, maka total desa Kecamatan Talang Kelapa kini memiliki 12 desa dan kelurahan. Adapun jumlah Camat yang memimpin Kecamatan Talang Kelapa dari dulu sampai sekarang tercatat 7 camat, yakni. Drs Syaiful Anwar, Drs Alimin Bahri (era Muba) Drs Suherman Maksun (era peralihan) Drs Efendi Samsani, Drs Ambrizal, Hasmi S.Sos M.Si, Drs Yusrizal dan Sekarang Aminuddin,S.Pd.,S.IP.,MM.</p>\r\n<p>Kecamatan Talang Kelapa merupakan salah satu kecamatan di Kabupaten Banyuasin dengan luas 560,12 kilometer persegi dan berpenduduk sekitar 125.233 jiwa. Letak Kecamatan Talang Kelapa berbatasan langsung dengan enam kecamatan, sebelah utara berbatasan Kecamatan Tanjung Lago dan Sako Palembang, sebelah selatan Kecamatan Gandus Palembang, sebelah barat Kecamatan Sembawa, sebelah timur Kecamatan Sukarame dan Alang-Alang Lebar Palembang.</p>\r\n<p>Kecamatan Talang Kelapa terdiri atas 12 wilayah, yakni 6 Desa, Sungai Rengit, Sungai Rengit Murni, Gasing, Pangkalan Benteng, Talang Buluh, dan Kenten Laut, dan 6 wilayah kelurahan, Air Batu, Sukamoro, Sukajadi, Tanah Mas, Talang Keramat, Kenten.</p>\r\n<p>Pusat pemerintahan Kecamatan Talang Kelapa berada di Kelurahan Sukajadi, sedangkan titik keramaian berada di dua wilayah, Kelurahan Sukajadi dan Kelurahan Kenten, hal ini dikarenakan didua wilayah ini terdapat pusat pemukiman dan pertokoan, dan memiliki akses yang mudah seperti Jalang Palembang &ndash; Betung di Sukajadi dan Jalan Pangeran Ayin di Kelurahan Kenten. Kedua jalan ini langsung menuju kota Palembang.</p>\r\n<p>Kecamatan Talang Kelapa berada diperbatasan yang notabene menempel Palembang sehingga sebagian besarnya berbudaya dan berbahasa Palembang. Bahkan hampir tidak ditemui penduduk menggunakan khas dialek daerah Talang Kelapa, selain berbahasa Palembang. Kecamatan Talang Kelapa, yakni jalur urat nadi perekonomian perbatasan mulai dari kawasan Sukajadi ruas kilometer 13 sampai kilometer 20, Jalan Palembang &ndash; Betung. Adapun diwilayah Kenten &ndash; Palembang terdapat ruas Jalan Pangeran Ayin yang menghubungkan langsung dibagian wilayah kota Palembang, dan satu lagi kawasan yang baru berkembang, yakni wilayah Gasing yang merupakan kawasan industri di Jalan Poros Tanjung Api-Api.</p>\r\n<p>Kemajuan yang begitu cepat di Kecamatan Talang Kelapa, serta posisinya yang berada diperbatasan, sehingga wilayah ini menjadi kawasan kecamatan berpenduduk urban, dan kecamatan penyangga perkotaan. Cepatnya pembangunan disegala bidang dalam wilayah kecamatan ini,membuat Kecamatan Talang Kelapa Kabupaten Banyuasin dijuluki Kecamatan penyangga perbatasan kota Palembang yang berhasil dan sukses, memanfaatkan posisinya diperbatasan kota untuk mendongkrak kemajuan wilayahnya.</p>', '2024-01-09 13:00:43', 1, 1, 'Talang_Kelapa.jpeg');
+(10, 3, 'Profil Kecamatan Jakabaring', '<p>Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat cauctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat cauctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per Mauris in erat justo.</p>', '2023-05-11 11:37:22', 1, 1, 'smp.jpg'),
+(11, 1, 'Visi dan Misi Kecamatan Jakabaring', '<p><strong>V I S I </strong></p>\r\n<p>Terwujudnya Kecamatan terbaik dan membanggakan dalam pelayanan.</p>\r\n<p><strong>M I S I</strong></p>\r\n<ol>\r\n<li>Meningkatkan kualitas pelayanan (dengan cara menerapkan proses pelayanan yang aktif, cepat, efisien, ramah, ikhlas dan akuntable</li>\r\n<li>Meningkatkan profesionalisme aparatur (menciptakan kepercayaan masyarakat terhadap operator penyelenggara pelayanan publik)</li>\r\n<li>Menyediakan sarana dan prasarana yang memadai untuk menciptakan kenyamanan dalam pelayanan masyarakat</li>\r\n<li>Terpenuhnya pelayanan terhadap masyarakat</li>\r\n<li>Terwujudnya kinerja aparatur yang baik</li>\r\n</ol>', '2023-05-11 11:40:07', 1, 1, 'visi-dan-misi.jpeg'),
+(12, 2, 'Struktur Organisasi Kecamatan Jakabaring', '<p>Lorem issum</p>', '2023-05-11 11:54:09', 1, 1, 'struktur_organisasi_kecamatan_jakabaring.jpeg'),
+(13, 6, 'Sejarah Kecamatan Jakabaring', '<p>Jakabaring adalah sebuah kecamatan di Kota Palembang Provinsi  Sumatera Selatan, Indonesia. Pada tahun 2016 kecamatan ini resmi terbentuk dari Kecamatan Seberang Ulu I. Sejarah berdirinya Kecamatan Jakabaring dapat dihubungkan dengan perkembangan kota Palembang secara umum yang sebelumnya Jakabaring merupakan daerah yang dikenal sebagai Kawasan pemukiman dan pertanian. Seiring dengan perkembangan di Kecamatan tersebut diirngi dengan adanya tempat stadion olahraga kelas Internasional Jakabaring Sport City yang pernah digunakan pada ajang perhelatan olahraga internasional seperti SEA Games ke-26 tahun 2011, Islamic Solidarity Games ke-3 tahun 2013, dan Asian Games ke-18 tahun 2018.  Jakabaring terdiri dari 5 Kelurahan yaitu 8 Ulu, 9/10 Ulu, 15 Ulu, Sila Beranti dan Tuan Kentang, dengan jumlah masyarakat yang tercatat pada tahun 2021 berjumlah 90.942 Jiwa</p>', '2024-01-09 13:00:43', 1, 1, 'IMG_1635.jpg');
 
 -- --------------------------------------------------------
 
@@ -213,12 +209,11 @@ CREATE TABLE `layanan` (
 --
 
 INSERT INTO `layanan` (`id`, `nama_layanan`, `deskripsi_layanan`, `is_active`) VALUES
-(1, 'Surat Keterangan Berobat', 'Surat Keterangan Berobat', 1),
-(2, 'Surat Keterangan Belum Menikah', 'Surat Keterangan Belum Menikah', 1),
-(3, 'Surat Keterangan Belum Punya Rumah', 'Surat Keterangan Belum Punya Rumah', 1),
-(4, 'Surat Keterangan Tidak Mampu', 'Surat Keterangan Tidak Mampu', 1),
-(5, 'Pengantar SKCK', 'Pengantar SKCK', 1),
-(6, 'Pengantar SKBD', 'Pengantar SKBD', 1);
+(1, 'Pelayanan Pembuatan Surat Pengakuan Hak Tanah', 'Pelayanan Pembuatan Surat Pengakuan Hak Tanah', 1),
+(2, 'Pelayanan Pembuatan Surat Ahli Waris dan Kuasa Waris', 'Pelayanan Pembuatan Surat Ahli Waris dan Kuasa Waris', 1),
+(3, 'Pelayanan Legalisir Berkas Waris', 'Pelayanan Legalisir Berkas Waris', 1),
+(4, 'Pelayanan Penerbitan Surat Keterangan Domisili', 'Pelayanan Penerbitan Surat Keterangan Domisili', 1),
+(5, 'Pelayanan Peminjaman Mobil Jenazah', 'Pelayanan Peminjaman Mobil Jenazah', 1);
 
 -- --------------------------------------------------------
 
@@ -237,7 +232,8 @@ CREATE TABLE `level` (
 
 INSERT INTO `level` (`id_level`, `nama_level`) VALUES
 (1, 'Admin'),
-(2, 'Pimpinan');
+(2, 'Pimpinan'),
+(3, 'Pengguna');
 
 -- --------------------------------------------------------
 
@@ -284,51 +280,41 @@ INSERT INTO `persyaratan_layanan` (`id`, `id_layanan`, `id_persyaratan`, `is_man
 (7, 1, 9, 1, 2),
 (8, 1, 8, 1, 2),
 (9, 1, 11, 1, 2),
-(11, 2, 1, 1, 1),
-(12, 2, 2, 1, 1),
-(13, 2, 5, 1, 1),
-(14, 2, 6, 1, 1),
-(15, 2, 3, 1, 1),
-(16, 2, 4, 1, 1),
-(17, 2, 9, 1, 2),
-(18, 2, 8, 1, 2),
-(19, 2, 11, 0, 2),
-(20, 3, 1, 1, 1),
-(21, 3, 2, 1, 1),
-(22, 3, 5, 1, 1),
-(23, 3, 6, 1, 1),
-(24, 3, 3, 1, 1),
-(25, 3, 4, 1, 1),
-(26, 3, 9, 1, 2),
-(27, 3, 8, 1, 2),
-(28, 3, 11, 1, 2),
-(29, 4, 1, 1, 1),
-(30, 4, 2, 1, 1),
-(31, 4, 5, 1, 1),
-(32, 4, 6, 1, 1),
-(33, 4, 3, 1, 1),
-(34, 4, 4, 1, 1),
-(35, 4, 9, 1, 2),
-(36, 4, 8, 1, 2),
-(37, 4, 11, 1, 2),
-(38, 5, 1, 1, 1),
-(39, 5, 2, 1, 1),
-(40, 5, 5, 1, 1),
-(41, 5, 6, 1, 1),
-(42, 5, 3, 1, 1),
-(43, 5, 4, 1, 1),
-(44, 5, 9, 1, 2),
-(45, 5, 8, 1, 2),
-(46, 5, 11, 1, 2),
-(47, 6, 1, 1, 1),
-(48, 6, 2, 1, 1),
-(49, 6, 5, 1, 1),
-(50, 6, 6, 1, 1),
-(51, 6, 3, 1, 1),
-(52, 6, 4, 1, 1),
-(53, 6, 9, 1, 2),
-(54, 6, 8, 1, 2),
-(55, 6, 11, 1, 2);
+(56, 1, 26, 1, 2),
+(57, 1, 22, 1, 2),
+(58, 1, 23, 1, 2),
+(59, 1, 24, 0, 2),
+(60, 1, 25, 0, 2),
+(61, 2, 1, 1, 1),
+(62, 2, 2, 1, 1),
+(63, 2, 3, 1, 1),
+(64, 2, 4, 1, 1),
+(65, 2, 6, 1, 1),
+(66, 2, 8, 1, 2),
+(67, 2, 27, 1, 2),
+(68, 2, 10, 1, 2),
+(69, 2, 28, 1, 2),
+(70, 2, 29, 1, 2),
+(71, 2, 26, 1, 2),
+(72, 5, 1, 1, 1),
+(73, 5, 2, 1, 1),
+(74, 5, 5, 1, 1),
+(75, 5, 6, 1, 1),
+(76, 5, 3, 1, 1),
+(77, 5, 4, 1, 1),
+(78, 5, 10, 1, 2),
+(79, 5, 28, 1, 2),
+(80, 5, 8, 1, 2),
+(81, 5, 22, 1, 2),
+(102, 3, 1, 1, 1),
+(103, 3, 2, 1, 1),
+(104, 3, 3, 1, 1),
+(105, 3, 5, 1, 1),
+(106, 3, 6, 1, 1),
+(107, 3, 4, 1, 1),
+(108, 3, 10, 1, 2),
+(109, 3, 28, 1, 2),
+(110, 3, 27, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -352,8 +338,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `nip`, `nama`, `kontak`, `password`, `last_login`, `level_user`, `original_pass`) VALUES
-(1, '11111', 'Admin', '081299929922', '$2y$10$i6LAb9xDh4G.pgVZ.cGknOUtRiPvK5SAW8SeMvAnICqKvnejunsQS', '2024-01-10 06:16:03', 1, ''),
-(2, '22222', 'Pimpinan', '082189299222', '$2y$10$bMYspn86xs5Syrp9uclhu.WnCGUm9ZOhq2QBKaS8fWZGsxQro3aoW', '2023-05-08 15:11:46', 2, '');
+(1, '11111', 'Admin', '081299929922', '$2y$10$i6LAb9xDh4G.pgVZ.cGknOUtRiPvK5SAW8SeMvAnICqKvnejunsQS', '2024-08-25 00:50:22', 1, ''),
+(2, '22222', 'Pimpinan', '082189299222', '$2y$10$bMYspn86xs5Syrp9uclhu.WnCGUm9ZOhq2QBKaS8fWZGsxQro3aoW', '2023-05-08 15:11:46', 2, ''),
+(19, '123', 'Muhammad Yusron Hartoyo', '082186427595', '$2y$10$k.BKGsde17BHQ3xP9GIASu0Z3S955a5.L0BQve6wpF1hUBlv1NXay', '2024-08-25 01:16:34', 3, '123');
 
 --
 -- Indexes for dumped tables
@@ -457,19 +444,19 @@ ALTER TABLE `artikel`
 -- AUTO_INCREMENT untuk tabel `berkas_pengajuan`
 --
 ALTER TABLE `berkas_pengajuan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 
 --
 -- AUTO_INCREMENT untuk tabel `field_persyaratan`
 --
 ALTER TABLE `field_persyaratan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT untuk tabel `galeri`
 --
 ALTER TABLE `galeri`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT untuk tabel `jenis_artikel`
@@ -499,25 +486,25 @@ ALTER TABLE `layanan`
 -- AUTO_INCREMENT untuk tabel `level`
 --
 ALTER TABLE `level`
-  MODIFY `id_level` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_level` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT untuk tabel `pengajuan`
 --
 ALTER TABLE `pengajuan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT untuk tabel `persyaratan_layanan`
 --
 ALTER TABLE `persyaratan_layanan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

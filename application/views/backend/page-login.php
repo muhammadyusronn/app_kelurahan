@@ -23,7 +23,7 @@
         <form id="login-form" class="mt-4" action="<?= base_url('login') ?>" method="post">
             <div class="text-center mb-4">
                 <img src="<?php base_url() ?>assets/img/smp.png" class="img-thumbnail mb-2" style="max-width: 80px ;">
-                <h3>SMP Negeri 37 OKU</h3>
+                <h3>KECAMATAN JAKABARING</h3>
             </div>
             <?php echo $this->session->flashdata('msg'); ?>
             <div class="form-group">
@@ -37,6 +37,12 @@
                     <div class="input-icon"><i class="fa fa-lock font-16"></i></div>
                     <input class="form-control" type="password" name="password" placeholder="Password">
                 </div>
+            </div>
+            <div class="form-group">
+                Anda belum memiliki akun? Silahkan mendaftar <a href="<?= base_url('register') ?>"><strong>disini</strong></a>
+            </div>
+            <div class="form-group">
+                <a href="<?= base_url('/') ?>"><strong>KEMBALI KE HALAMAN UTAMA</strong></a>
             </div>
             <div class="form-group">
                 <button class="btn btn-info btn-block" name="submit" type="submit">Login</button>

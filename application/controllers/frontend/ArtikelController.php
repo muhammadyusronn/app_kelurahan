@@ -10,7 +10,7 @@ class ArtikelController extends MY_Controller{
 
     public function index()
     {
-        $data['title'] = 'Kelurahan Talang Kelapa';
+        $data['title'] = 'Kecamatan Jakabaring';
         $data['layanan'] = $this->LayananModel->get(['is_active'=>'1']);
         // $data['artikel'] = $this->ArtikelModel->get(['is_published'=>1]);
         $cond = [];
@@ -27,7 +27,7 @@ class ArtikelController extends MY_Controller{
 
     public function detail($id=null)
     {
-        $data['title'] = 'Kelurahan Talang Kelapa';
+        $data['title'] = 'Kecamatan Jakabaring';
         $data['layanan'] = $this->LayananModel->get(['is_active'=>'1']);
         $data['artikel'] = $this->ArtikelModel->get_data_join(['user'],['user.id_user=artikel.created_by'],['id'=>$id]);
         $this->renderpage('frontend/artikel-detail', $data);

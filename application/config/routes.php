@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 $route['login']                         = 'backend/AuthController/login';
+$route['register']                         = 'backend/AuthController/register';
 $route['logout']                        = 'backend/AuthController/logout';
 $route['dash']                          = 'backend/HomeController/index';
 // Routing Admin

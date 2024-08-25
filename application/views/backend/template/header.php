@@ -1,3 +1,10 @@
+<?php
+$sess = $this->session->userdata('token');
+if(!isset($sess) || $sess['level']=="3"){
+    redirect('/');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +12,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title><?= $title; ?></title>
+    <title>JAKABARING</title>
     <!-- Title Icon -->
     <link rel="icon" type="image/x-icon" href="<?php base_url() ?>assets/img/smp.png">
     <!-- GLOBAL MAINLY STYLES-->
@@ -51,7 +58,7 @@
                 <a class="link" href="<?= base_url('dash') ?>">
                     <a class="nav-link brand" data-toggle="dropdown">
                         <!-- <img src="<?= base_url() ?>assets/img/smp.png" style="max-width:25px;" /> -->
-                        <span class="ml-1"></span>TLG KELAPA
+                        <span class="ml-1"></span>JAKABARING
                     </a>
                     <span class="brand-mini">
                         <img src="<?= base_url() ?>assets/img/smp.png" style="max-width:30px;" />
@@ -123,11 +130,6 @@
                         </a>
                     </li>
                     <li>
-                        <a class="active" href="<?= base_url('pengajar') ?>"><i class="sidebar-item-icon fa fa-users"></i>
-                            <span class="nav-label">Pengajar</span>
-                        </a>
-                    </li>
-                    <li>
                         <a class="active" href="<?= base_url('konten') ?>"><i class="sidebar-item-icon fa fa-address-card-o"></i>
                             <span class="nav-label">Konten Website</span>
                         </a>
@@ -135,6 +137,11 @@
                     <li>
                         <a class="active" href="<?= base_url('artikel') ?>"><i class="sidebar-item-icon fa fa-newspaper-o"></i>
                             <span class="nav-label">Artikel</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="active" href="<?= base_url('artikel') ?>"><i class="sidebar-item-icon fa fa-book"></i>
+                            <span class="nav-label">Pengajuan Berkas</span>
                         </a>
                     </li>
                 </ul>

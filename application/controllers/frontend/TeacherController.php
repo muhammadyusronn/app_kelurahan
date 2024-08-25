@@ -8,7 +8,7 @@ class TeacherController extends MY_Controller{
 
     public function index()
     {
-        $data['title'] = 'SMP N 37 OKU';
+        $data['title'] = 'Kecamatan Jakabaring';
         $data['pengajar'] = $this->PengajarModel->get();
         $this->renderpage('frontend/teacher', $data);
     }

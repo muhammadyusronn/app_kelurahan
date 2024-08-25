@@ -5,7 +5,7 @@
             <div class="col-lg-12">
                 <div class="ibox">
                     <div class="ibox-body">
-                        <marquee><h3 class="m-0">Selamat Data di Website SMP Negeri 37 OKU</h3></marquee>
+                        <marquee><h3 class="m-0">Selamat Data di Website Kecamatan Jakabaring</h3></marquee>
                     </div>
                 </div>
             </div>

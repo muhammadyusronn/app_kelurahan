@@ -41,7 +41,7 @@
 
             <div class="entry-content">
                 <p>
-                <?= substr($i->isi, 0, 100) . '...'; ?>
+                <?= substr($i->isi, 0, 50) . '...'; ?>
                 </p>
                 <div class="read-more">
                 <a href="<?= base_url('artikel-detail/').$i->id; ?>">Read More</a>

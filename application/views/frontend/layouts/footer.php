@@ -6,11 +6,11 @@
         <div class="row">
 
           <div class="col-lg-4 col-md-6 footer-contact">
-            <h3>Kelurahan Talang Kelapa</h3>
+            <h3>Kecamatan Jakabaring</h3>
             <p>
-            Jl. Klp. Gading No.61, RT.69, Talang Klp., <br> Kec. Alang-Alang Lebar, Kota Palembang, <br>Sumatera Selatan 30155<br>
-              <strong>Phone:</strong> (0711) 7425871<br>
-              <strong>Email:</strong> ikel.talangkelapa@talangkelapa.go.id<br>
+              Kantor Camat Jakabaring  Jl. Pangeran Ratu, <br> 15 Ulu, Kecamatan Jakabaring, Kota Palembang, <br>Sumatera Selatan<br>
+              <strong>Phone:</strong>088286358320<br>
+              <strong>Email:</strong>kecamatanjkbrg@gmail.com<br>
             </p>
           </div>
 
@@ -39,15 +39,12 @@
     <div class="container d-md-flex py-4">
 
       <div class="me-md-auto text-center text-md-start">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Company</span></strong>. All Rights Reserved
-        </div>
         <div class="credits">
           <!-- All the links in the footer should remain intact. -->
           <!-- You can delete the links only if you purchased the pro version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
           <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/company-free-html-bootstrap-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          Created by April</a>
         </div>
       </div>
     </div>

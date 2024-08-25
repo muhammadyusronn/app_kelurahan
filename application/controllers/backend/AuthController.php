@@ -67,11 +67,52 @@ class AuthController extends MY_Controller
                 if ($this->data['info']['status'] == 'ok') {
                     $this->flashmsg($this->data['message'], 'success');
                     $this->session->set_userdata(['token' => $this->data['resess']]);
-                    redirect('dash');
+                    if($this->data['resess']['level']=="3"){
+                        redirect('/');
+                    }else{
+                        redirect('dash');
+                    }
                 } else {
                     $this->flashmsg($this->data['message'], 'danger');
                 }
             }
+        }
+    }
+
+    public function register()
+    {
+        if (isset($token)) {
+            redirect('dash');
+        }
+        if (!isset($_POST['submit'])) {
+            $data['title'] = 'Halaman Register';
+            $this->load->view('backend/page-register', $data);
+        }else if(isset($_POST['submit'])) {
+            $options = [
+                'cost' => 10,
+            ];
+            $data = [
+                'nip' => $this->post('nik'),
+                'nama' => $this->post('nama'),
+                'kontak' => $this->post('kontak'),
+                'level_user' => 3,
+                'password' => password_hash($this->post('password'), PASSWORD_DEFAULT, $options),
+                'original_pass' => $this->post('password')
+
+            ];
+            $this->db->trans_start();
+            $insert = $this->AdminModel->insert($data);
+            $this->db->trans_complete();
+            if ($this->db->trans_status() === FALSE) {
+                $this->flashmsg('Registrasi gagal, mohon cek data anda', 'danger');
+                redirect('register');
+            } else {
+                $this->flashmsg('Registrasi berhasi, silahkan login', 'success');
+                redirect('login');
+            }
+        }else{
+            $data['title'] = 'Halaman Register';
+            $this->load->view('backend/page-register', $data);
         }
     }
 
