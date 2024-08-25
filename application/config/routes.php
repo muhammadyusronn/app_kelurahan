@@ -13,9 +13,9 @@ $route['level']                         = 'backend/LevelController/index';
 $route['level/create']                  = 'backend/LevelController/create';
 $route['level/update/(:num)']           = 'backend/LevelController/edit/$1';
 // Routing Pengajar
-$route['pengajar']                         = 'backend/PengajarController/index';
-$route['pengajar/create']                  = 'backend/PengajarController/create';
-$route['pengajar/update/(:num)']           = 'backend/PengajarController/edit/$1';
+$route['layanan']                         = 'backend/LayananController/index';
+$route['layanan/create']                  = 'backend/LayananController/create';
+$route['layanan/detail/(:num)']           = 'backend/LayananController/detail/$1';
 // Jenis Konten
 $route['jenis-konten']                  = 'backend/JenisKontenController/index';
 $route['jenis-konten/create']           = 'backend/JenisKontenController/create';

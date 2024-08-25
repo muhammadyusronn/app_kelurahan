@@ -42,7 +42,6 @@ if(!isset($sess) || $sess['level']=="3"){
     <!-- PAGE LEVEL STYLES-->
     <!-- TinyMCE CDN -->
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-
     <script>
         tinymce.init({
             selector: 'textarea#editor',
@@ -122,7 +121,6 @@ if(!isset($sess) || $sess['level']=="3"){
                                 <span class="nav-label">Admin</span>
                             </a>
                         </li>
-                    <?php } ?>
                     <li class="heading">DATA</li>
                     <li>
                         <a class="active" href="<?= base_url('galeri') ?>"><i class="sidebar-item-icon fa fa-photo"></i>
@@ -139,8 +137,9 @@ if(!isset($sess) || $sess['level']=="3"){
                             <span class="nav-label">Artikel</span>
                         </a>
                     </li>
+                    <?php } ?>
                     <li>
-                        <a class="active" href="<?= base_url('artikel') ?>"><i class="sidebar-item-icon fa fa-book"></i>
+                        <a class="active" href="<?= base_url('layanan') ?>"><i class="sidebar-item-icon fa fa-book"></i>
                             <span class="nav-label">Pengajuan Berkas</span>
                         </a>
                     </li>
