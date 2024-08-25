@@ -32,6 +32,10 @@ $route['artikel']                         = 'backend/ArtikelController/index';
 $route['artikel/create']                  = 'backend/ArtikelController/create';
 $route['artikel/update/(:num)']           = 'backend/ArtikelController/edit/$1';
 
+$route['dokumen/(:num)']                  = 'backend/DokumenController/index/$1';
+$route['soft-file/(:num)']                  = 'backend/DokumenController/index/$1';
+
+
 // Routing Frontend
 $route['home-page']                     = 'frontend/HomeController/index';
 $route['profile-page']                  = 'frontend/AboutController/index';
