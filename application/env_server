@@ -1,8 +1,8 @@
 # Database Configuration
 DB_HOSTNAME="localhost"
-DB_USERNAME="aprimatu_yusron"
+DB_USERNAME="appskumy_admin"
 DB_PASSWORD="Askl1290!@#"
-DB_DATABASE="aprimatu_april"
+DB_DATABASE="appskumy_app_kecamatan"
 DB_DRIVER="mysqli"
 
-BASE_URL = "https://april.aprima-tugasakhir.my.id/"
+BASE_URL = "http://apps-ku.my.id/"
