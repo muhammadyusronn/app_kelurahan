@@ -143,6 +143,11 @@ if(!isset($sess) || $sess['level']=="3"){
                             <span class="nav-label">Pengajuan Berkas</span>
                         </a>
                     </li>
+                    <li>
+                        <a class="active" href="<?= base_url('logout') ?>"><i class="sidebar-item-icon fa-sign-out"></i>
+                            <span class="nav-label">Logout</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
