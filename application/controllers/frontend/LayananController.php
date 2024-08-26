@@ -57,7 +57,7 @@ class LayananController extends MY_Controller{
                         'value'=> ($i->type == '1') ? $this->POST($i->code) : $data['upload_data']['file_name'],
                     ]);
                 endforeach;
-$message = "Kepat yth. Bapak/Ibu ".$this->POST('nama_pemohon').", Permohonan terkait ".$this->POST('nama_layanan')." anda sudah kami terima dan sedang dalam proses review dari admin kecamatan jakabaring. Mohon tunggu dalam waktu maksimal 1 x 24 jam untuk tindak lanjut dari permohonan yang sudah anda buat.
+$message = "Kepada yth. Bapak/Ibu ".$this->POST('nama_pemohon').", Permohonan terkait ".$this->POST('nama_layanan')." anda sudah kami terima dan sedang dalam proses review dari admin kecamatan jakabaring. Mohon tunggu dalam waktu maksimal 1 x 24 jam untuk tindak lanjut dari permohonan yang sudah anda buat.
 Terima Kasih sudah menggunakan layanan kami.
 Salam sehat selalu!";
                     $this->send_wa($this->POST('nomor_hp'),$message);
