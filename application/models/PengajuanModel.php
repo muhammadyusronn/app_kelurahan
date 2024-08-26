@@ -19,6 +19,15 @@ class PengajuanModel extends MY_Model
         return $this->db->get()->result();
     }
 
+    public function get_all_by_pemohon($pemohon)
+    {
+        $this->db->select('pengajuan.*,layanan.nama_layanan');
+        $this->db->from('pengajuan');
+        $this->db->join('layanan', 'layanan.id=pengajuan.id_layanan');
+        $this->db->where('pengajuan.id_pemohon',$pemohon);
+        return $this->db->get()->result();
+    }
+
     public function get_detail_permohonan($id)
     {
         //         SELECT 

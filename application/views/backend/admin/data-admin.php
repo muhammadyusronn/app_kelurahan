@@ -44,8 +44,10 @@
                                 <td><?= $i->kontak; ?></td>
                                 <td><?= $i->nama_level; ?></td>
                                 <td>
-                                    <a href="<?= base_url('admin/update/') . $i->id_user; ?>" class="btn btn-warning" title="EDIT"><i class="fa fa-pencil"></i></a>
-                                    <a href="<?= base_url('backend/AdminController/destroy/') . $i->id_user ?>" class="btn btn-danger" title="HAPUS" onclick="javascript: return confirm('anda yakin menghapus data?')"><i class="fa fa-trash"></i></a>
+                                    <? if ($i->level_user != "3" && $i->nip != "11111" && $i->nip != "22222") { ?>
+                                        <a href="<?= base_url('admin/update/') . $i->id_user; ?>" class="btn btn-warning" title="EDIT"><i class="fa fa-pencil"></i></a>
+                                        <a href="<?= base_url('backend/AdminController/destroy/') . $i->id_user ?>" class="btn btn-danger" title="HAPUS" onclick="javascript: return confirm('anda yakin menghapus data?')"><i class="fa fa-trash"></i></a>
+                                    <?php } ?>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

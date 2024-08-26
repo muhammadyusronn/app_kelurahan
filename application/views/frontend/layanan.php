@@ -34,6 +34,7 @@
           </div>
           <?php if ($token !== null) { ?>
             <form action="<?= base_url('layanan/create') ?>" method="post" enctype="multipart/form-data">
+              <input type="hidden" name="nama_layanan" value="<?= $sub_title ?>">
               <input type="hidden" name="id_layanan" value="<?= $this->input->get('id') ?>">
               <?php foreach ($persyaratan_layanan as $i): ?>
                 <div class="form-group mt-3">

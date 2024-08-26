@@ -2,7 +2,7 @@
 $sess = $this->session->userdata('token');
 $is_login = false;
 if ($sess !== null) {
-  if($sess['level'] == "3"){
+  if ($sess['level'] == "3") {
     $is_login = true;
   }
 }
@@ -26,6 +26,7 @@ if ($sess !== null) {
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
+  <link href="<?= base_url() ?>assets/css/custom.css" rel="stylesheet">
   <link href="<?= base_url() ?>assets/frontend/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="<?= base_url() ?>assets/frontend/vendor/aos/aos.css" rel="stylesheet">
   <link href="<?= base_url() ?>assets/frontend/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -66,6 +67,7 @@ if ($sess !== null) {
               <li><a href="<?= base_url('visi-page') ?>">Visi dan Misi</a></li>
               <li><a href="<?= base_url('struktur-page') ?>">Struktur Organisasi</a></li>
               <li><a href="<?= base_url('sejarah-page') ?>">Sejarah</a></li>
+              <li><a href="<?= base_url('kontak-page') ?>">Kontak</a></li>
             </ul>
           </li>
 
@@ -91,10 +93,13 @@ if ($sess !== null) {
               </li> -->
             </ul>
           </li>
-          <li><a href="<?= base_url('kontak-page') ?>">Tentang</a></li>
           <?php if ($is_login) { ?>
-            <li><a href="<?= base_url('logout') ?>">Logout</a></li>
-            <li><a href="">HALO, <?= $sess['nama'] ?></a></li>
+            <li><a href="<?= base_url('history-page') ?>">History Permohonan</a></li>
+            <li class="dropdown"><a href="#"><span>HALO, <?= $sess['nama'] ?></span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+              <li><a href="<?= base_url('logout') ?>">Logout</a></li>
+              </ul>
+            </li>
           <?php } else { ?>
             <li><a href="<?= base_url('login') ?>">Login</a></li>
           <?php } ?>
@@ -102,13 +107,13 @@ if ($sess !== null) {
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-
-      <div class="header-social-links d-flex">
-        <a href="#" class="twitter"><i class="bu bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bu bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bu bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bu bi-linkedin"></i></i></a>
-      </div>
-
+      <?php if (!$is_login) { ?>
+        <div class="header-social-links d-flex">
+          <a href="#" class="twitter"><i class="bu bi-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bu bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bu bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bu bi-linkedin"></i></i></a>
+        </div>
+      <?php } ?>
     </div>
   </header><!-- End Header -->

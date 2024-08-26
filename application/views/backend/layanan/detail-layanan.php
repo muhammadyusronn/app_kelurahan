@@ -22,6 +22,12 @@
             <div class="ibox-body">
                 <h5 class="mb-4"><strong>Permohonan <?= $layanan[0]->nama_layanan ?></strong></h5>
                 <form class="form-horizontal" id="form-layanan" method="post" action="<?= base_url('layanan/detail/' . $layanan[0]->id) ?>">
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Nama Layanan</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" type="text" value="<?= $layanan[0]->nama_layanan ?>" name="nama_layanan" readonly>
+                        </div>
+                    </div>
                     <?php for ($i = 0; $i < count($layanan); $i++) {
                         if ($layanan[$i]->type == "1") {
                     ?>
@@ -46,7 +52,7 @@
                         <label class="col-sm-2 col-form-label">Status Approval</label>
                         <div class="col-sm-10">
                             <select class="form-control" name="status" <?= (($this->session->userdata('token')['level'] == "1" && $layanan[0]->status == "2") || ($this->session->userdata('token')['level'] == "2" && $layanan[0]->status == "3")) ? "" : "disabled" ?>>
-                                <option value="<?= ($this->session->userdata('token')['level'] == "1") ? "3" :"1"  ?>" <?= ($layanan[0]->status == "3" || $layanan[0]->status == "1") ? "selected" : "" ?>>TERIMA</option>
+                                <option value="<?= ($this->session->userdata('token')['level'] == "1") ? "3" : "1"  ?>" <?= ($layanan[0]->status == "3" || $layanan[0]->status == "1") ? "selected" : "" ?>>TERIMA</option>
                                 <option value="0" <?= ($layanan[0]->status == "0") ? "selected" : "" ?>>TOLAK</option>
                             </select>
                         </div>
@@ -54,7 +60,7 @@
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Deskripsi</label>
                         <div class="col-sm-10">
-                            <input class="form-control" id="deskripsi" type="text" value="<?= $layanan[0]->deskripsi ?>" name="deskripsi" required <?=  (($this->session->userdata('token')['level'] == "1" && $layanan[0]->status == "2") || ($this->session->userdata('token')['level'] == "2" && $layanan[0]->status == "3")) ? "" : "readonly" ?>>
+                            <input class="form-control" id="deskripsi" type="text" value="<?= $layanan[0]->deskripsi ?>" name="deskripsi" required <?= (($this->session->userdata('token')['level'] == "1" && $layanan[0]->status == "2") || ($this->session->userdata('token')['level'] == "2" && $layanan[0]->status == "3")) ? "" : "readonly" ?>>
                         </div>
                     </div>
                     <?php if ($this->session->userdata('token')['level'] == "1") {

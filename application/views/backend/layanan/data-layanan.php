@@ -49,7 +49,7 @@
                                     } else if ($i->status == "3") {
                                         echo '<span class="badge badge-info">Menunggu Approval Camat</span>';
                                     } else if ($i->status == "0") {
-                                        echo '<span class="badge badge-warning">Pengajuan Ditolak</span>';
+                                        echo '<span class="badge badge-danger">Pengajuan Ditolak</span>';
                                     } else if ($i->status == "1") {
                                         echo '<span class="badge badge-success">Pengajuan Selesai</span>';
                                     }

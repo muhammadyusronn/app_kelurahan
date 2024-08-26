@@ -29,7 +29,7 @@
             <div class="form-group">
                 <div class="input-group-icon right">
                     <div class="input-icon"><i class="fa fa-user"></i></div>
-                    <input class="form-control" type="text" name="nip" placeholder="NIP" autocomplete="off">
+                    <input class="form-control" type="text" name="nip" placeholder="NIK" autocomplete="off">
                 </div>
             </div>
             <div class="form-group">

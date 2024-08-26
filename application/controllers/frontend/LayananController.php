@@ -26,12 +26,13 @@ class LayananController extends MY_Controller{
                     'status'=> 2,
                     'verified_by'=> NULL,
                     'verified_date'=> NULL,
-                    'id_layanan'=> $this->POST('id_layanan')
+                    'id_layanan'=> $this->POST('id_layanan'),
+                    'id_pemohon'=> $this->session->userdata('token')['id_user']
                 ]);
                 $insert_id = $this->db->insert_id();
                 foreach($persyaratan as $i):
                     if($i->type == "2"){
-                        $path = './uploads/berkas/'.$this->POST('id_layanan').'-'.$this->POST('nama_pemohon');
+                        $path = './uploads/berkas/'.$insert_id.'-'.$this->POST('nama_pemohon');
                         if (!file_exists($path)) {
                             mkdir($path, 0777, true);
                         }
@@ -56,6 +57,11 @@ class LayananController extends MY_Controller{
                         'value'=> ($i->type == '1') ? $this->POST($i->code) : $data['upload_data']['file_name'],
                     ]);
                 endforeach;
+$message = "Kepat yth. Bapak/Ibu ".$this->POST('nama_pemohon').", Permohonan terkait ".$this->POST('nama_layanan')." anda sudah kami terima dan sedang dalam proses review dari admin kecamatan jakabaring. Mohon tunggu dalam waktu maksimal 1 x 24 jam untuk tindak lanjut dari permohonan yang sudah anda buat.
+Terima Kasih sudah menggunakan layanan kami.
+Salam sehat selalu!";
+                    $this->send_wa($this->POST('nomor_hp'),$message);
+                    $this->send_sms($this->POST('nomor_hp'),$message);
                     $this->db->trans_complete();
                 if ($this->db->trans_status() === FALSE) {
                     exit;

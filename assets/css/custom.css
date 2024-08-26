@@ -1,0 +1,60 @@
+/* Custom badge background color */
+.badge-primary {
+    background-color: #007bff; /* Blue */
+}
+
+.badge-secondary {
+    background-color: #6c757d; /* Gray */
+}
+
+.badge-success {
+    background-color: #28a745; /* Green */
+}
+
+.badge-danger {
+    background-color: #dc3545; /* Red */
+}
+
+.badge-warning {
+    background-color: #ffc107; /* Yellow */
+}
+
+.badge-info {
+    background-color: #17a2b8; /* Teal */
+}
+
+.badge-light {
+    background-color: #f8f9fa; /* Light Gray */
+    color: #000; /* Black text */
+}
+
+.badge-dark {
+    background-color: #343a40; /* Dark Gray */
+}
+
+/* Custom badge size */
+.badge-lg {
+    font-size: 1.25rem;
+    padding: 0.6em 0.8em;
+    border-radius: 0.4rem;
+}
+
+.badge-sm {
+    font-size: 0.75rem;
+    padding: 0.4em 0.6em;
+    border-radius: 0.25rem;
+}
+
+/* Custom badge rounded corners */
+.badge-rounded {
+    border-radius: 50%;
+    padding: 0.5em 0.8em;
+}
+
+/* Custom badge position */
+.badge-top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+}
