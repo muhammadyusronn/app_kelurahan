@@ -16,7 +16,7 @@ class DokumenController extends MY_Controller
 
 
         $mpdf = new \Mpdf\Mpdf();
-        $text = base_url() . 'soft-file/1'; // Content for QR code
+        $text = base_url() . 'soft-file/'.$id; // Content for QR code
         $filename = 'ttd.png'; // Filename for the QR code
 
         // Generate the QR code
