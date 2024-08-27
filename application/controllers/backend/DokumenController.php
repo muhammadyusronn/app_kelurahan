@@ -12,11 +12,35 @@ class DokumenController extends MY_Controller
     {
 
         $data = $this->PengajuanModel->get_detail_permohonan($id);
+        // Create a DateTime object from the provided string
+        $date = new DateTime($data[0]->verified_date);
 
+        // Define Indonesian month names
+        $months = [
+            1 => 'Januari',
+            'Februari',
+            'Maret',
+            'April',
+            'Mei',
+            'Juni',
+            'Juli',
+            'Agustus',
+            'September',
+            'Oktober',
+            'November',
+            'Desember'
+        ];
 
+        // Extract day, month, and year
+        $day = $date->format('d');
+        $month = $date->format('n'); // Numeric month without leading zeros
+        $year = $date->format('Y');
+
+        // Return formatted date
+        $formattedDate = $day . ' ' . $months[$month] . ' ' . $year;
 
         $mpdf = new \Mpdf\Mpdf();
-        $text = base_url() . 'soft-file/'.$id; // Content for QR code
+        $text = base_url() . 'soft-file/' . $id; // Content for QR code
         $filename = 'ttd.png'; // Filename for the QR code
 
         // Generate the QR code
@@ -86,7 +110,7 @@ class DokumenController extends MY_Controller
         </table>
         <hr>
         <br>
-        <h3 align="center">'.$data[0]->nama_layanan.'</h3>
+        <h3 align="center">' . $data[0]->nama_layanan . '</h3>
         <p>Yang bertanda tangan dibawah ini :</p>
         <table>
         <tr>
@@ -99,7 +123,7 @@ class DokumenController extends MY_Controller
         <td>Jabatan</td><td>:</td><td>CAMAT Jakabaring Kota Palembang</td>
         </tr>
         </table>
-        <p>Dengan ini menerima permohonan '.$data[0]->nama_layanan.' yang telah diajukan oleh :</p>
+        <p>Dengan ini menerima permohonan ' . $data[0]->nama_layanan . ' yang telah diajukan oleh :</p>
         <table>';
         $html2 = "";
         for ($x = 0; $x < count($data); $x++) {
@@ -110,10 +134,10 @@ class DokumenController extends MY_Controller
             }
         }
         $html3 = '</table>
-        <p>Demi kian surat ini dibuat untuk merespon permohonan '.$data[0]->nama_layanan.' yang sudah diajukan oleh pemohon.</p>
+        <p>Demi kian surat ini dibuat untuk merespon permohonan ' . $data[0]->nama_layanan . ' yang sudah diajukan oleh pemohon.</p>
         <div class="footer">
                 <div class="signature-container">
-                Palembang, 22 Agustus 2024
+                Palembang, '.$formattedDate.'
                     <img src="' . base_url('uploads/ttd/' . 'ttd.png') . '" style="width:80px;" alt="Gambar Cap atau Logo">
                     <div class="signature">
                         Drs. Rachmat Maulana<br>
