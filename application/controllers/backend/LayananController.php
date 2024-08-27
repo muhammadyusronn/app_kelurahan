@@ -20,6 +20,34 @@ class LayananController extends MY_Controller
         $this->render('backend/layanan/data-layanan', $data);
     }
 
+    public function laporan()
+    {
+        $data['title'] = 'Laporan Pengajuan';
+        $status = $this->input->get('status');
+        $tanggal_mulai = $this->input->get('tanggal_mulai');
+        $tanggal_selesai = $this->input->get('tanggal_selesai');
+        $filters = array(
+            'status' => $status
+        );
+
+        // Example date range
+        $dateRange = array(
+            'tanggal_mulai' => $tanggal_mulai,
+            'tanggal_selesai' => $tanggal_selesai
+        );
+
+        $data['layanan'] = $this->PengajuanModel->get_all('all', $filters, $dateRange);
+        $this->render('backend/layanan/data-laporan', $data);
+    }
+
+    public function detaillaporan($id)
+    {
+        $data['title'] = 'Data Permohonan';
+        $data['layanan'] = $this->PengajuanModel->get_detail_permohonan($id);
+        // $this->dump($data['layanan']);exit;
+        $this->render('backend/layanan/detail-laporan', $data);
+    }
+
     public function detail($id)
     {
         if (!isset($_POST['submit'])) {
@@ -36,17 +64,17 @@ class LayananController extends MY_Controller
                 'deskripsi' => $this->post('deskripsi')
             ]);
 
-$status="";
-if($this->session->userdata('token')['level'] == "1"){
-$status = ($this->post('status')=="3") ? "anda sudah diterima dan semua berkas yang anda lampirkan valid. Untuk tahap berikutnya mohon menunggu proses verifikasi dari Camat Jakabaring dan setelah itu berkas tanda terima anda akan kami terbitkan." : "kami tolak. Mohon maaf atas ketidaknyamanan yang anda rasakan. Berkas anda kami tolak dengan alasan ".$this->POST("deskripsi").". Anda bisa melakukan perbaikan dan kembali melakukan pengajuan permohonan lagi.";
-}else{
-$status = ($this->post('status')=="1") ? "anda sudah diterima dan semua berkas yang anda lampirkan valid. Surat keterangan anda sudah ditandatangan secara elektronik oleh Camat Jakabaring dan dinyatakan sah untuk digunakan. Berikut link download berkas elektronik anda : ".base_url('soft-file/'.$id) : "kami tolak. Mohon maaf atas ketidaknyamanan yang anda rasakan. Berkas anda kami tolak dengan alasan ".$this->POST("deskripsi").". Anda bisa melakukan perbaikan dan kembali melakukan pengajuan permohonan lagi.";
-}
-$message="Kepada yth. Bapak/Ibu ".$this->POST('nama_pemohon').", Permohonan terkait ".$this->POST('nama_layanan')." ".$status."
+            $status = "";
+            if ($this->session->userdata('token')['level'] == "1") {
+                $status = ($this->post('status') == "3") ? "anda sudah diterima dan semua berkas yang anda lampirkan valid. Untuk tahap berikutnya mohon menunggu proses verifikasi dari Camat Jakabaring dan setelah itu berkas tanda terima anda akan kami terbitkan." : "kami tolak. Mohon maaf atas ketidaknyamanan yang anda rasakan. Berkas anda kami tolak dengan alasan " . $this->POST("deskripsi") . ". Anda bisa melakukan perbaikan dan kembali melakukan pengajuan permohonan lagi.";
+            } else {
+                $status = ($this->post('status') == "1") ? "anda sudah diterima dan semua berkas yang anda lampirkan valid. Surat keterangan anda sudah ditandatangan secara elektronik oleh Camat Jakabaring dan dinyatakan sah untuk digunakan. Berikut link download berkas elektronik anda : " . base_url('soft-file/' . $id) : "kami tolak. Mohon maaf atas ketidaknyamanan yang anda rasakan. Berkas anda kami tolak dengan alasan " . $this->POST("deskripsi") . ". Anda bisa melakukan perbaikan dan kembali melakukan pengajuan permohonan lagi.";
+            }
+            $message = "Kepada yth. Bapak/Ibu " . $this->POST('nama_pemohon') . ", Permohonan terkait " . $this->POST('nama_layanan') . " " . $status . "
 Terima Kasih sudah menggunakan layanan kami.
 Salam sehat selalu!";
-            $this->send_wa($this->POST('nomor_hp'),$message);
-            $this->send_sms($this->POST('nomor_hp'),$message);
+            $this->send_wa($this->POST('nomor_hp'), $message);
+            $this->send_sms($this->POST('nomor_hp'), $message);
             $this->db->trans_complete();
             if ($this->db->trans_status() === FALSE) {
                 $this->flashmsg('Gagal melakukan approval', 'danger');
@@ -57,5 +85,4 @@ Salam sehat selalu!";
             }
         }
     }
-
 }

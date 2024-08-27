@@ -144,7 +144,12 @@ if(!isset($sess) || $sess['level']=="3"){
                         </a>
                     </li>
                     <li>
-                        <a class="active" href="<?= base_url('logout') ?>"><i class="sidebar-item-icon fa-sign-out"></i>
+                        <a class="active" href="<?= base_url('laporan') ?>"><i class="sidebar-item-icon fa fa-book"></i>
+                            <span class="nav-label">Laporan Pengajuan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="active" href="<?= base_url('logout') ?>"><i class="sidebar-item-icon fa fa-sign-out"></i>
                             <span class="nav-label">Logout</span>
                         </a>
                     </li>

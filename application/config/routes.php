@@ -13,6 +13,8 @@ $route['level']                         = 'backend/LevelController/index';
 $route['level/create']                  = 'backend/LevelController/create';
 $route['level/update/(:num)']           = 'backend/LevelController/edit/$1';
 // Routing Pengajar
+$route['laporan']                         = 'backend/LayananController/laporan';
+$route['laporan/detail-laporan/(:num)']   = 'backend/LayananController/detaillaporan/$1';
 $route['layanan']                         = 'backend/LayananController/index';
 $route['layanan/create']                  = 'backend/LayananController/create';
 $route['layanan/detail/(:num)']           = 'backend/LayananController/detail/$1';

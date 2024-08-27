@@ -190,7 +190,7 @@
         });
     })
     $(document).ready(function() {
-        $('#jalan-table').DataTable({
+        $('#report-table').DataTable({
             responsive: true,
             dom: '<"dt-top-container"<l><"dt-center-in-div"B><f>r>t<"dt-filter-spacer"><ip>',
             buttons: [{
@@ -198,7 +198,7 @@
                     "text": '<span class="fa fa-file-pdf-o"> PDF</span>',
                     "className": 'btn btn-primary',
                     exportOptions: {
-                        columns: [0, 1, 2, 3, 4, 5, 6, 7]
+                        // columns: [0, 1, 2, 3, 4, 5, 6, 7]
                     }
                 },
                 {
@@ -206,7 +206,7 @@
                     "text": '<span class="fa fa-file-excel-o"> Excel</span>',
                     "className": 'btn btn-success',
                     exportOptions: {
-                        columns: [0, 1, 2, 3, 4, 5, 6, 7]
+                        // columns: [0, 1, 2, 3, 4, 5, 6, 7]
                     }
                 },
                 {
@@ -214,7 +214,7 @@
                     "text": '<span class="fa fa-print"> Print</span>',
                     "className": 'btn btn-warning',
                     exportOptions: {
-                        columns: [0, 1, 2, 3, 4, 5, 6, 7]
+                        // columns: [0, 1, 2, 3, 4, 5, 6, 7]
                     }
                 }
             ]
@@ -224,9 +224,9 @@
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js" integrity="sha512-BmM0/BQlqh02wuK5Gz9yrbe7VyIVwOzD1o40yi1IsTjriX/NGF37NyXHfmFzIlMmoSIBXgqDiG1VNU6kB5dBbA==" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQeA1d0s0pRzW97I7Mz5d2J7E1lq5D9K8Tx4ks3i3kwb7U7H7rYv3rx" crossorigin="anonymous">
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-P2aPY8eCk5Lu0CmVeb1ty+J3q2Qn6D7sY6U8PU6nGoPvz5cDtnbUMb5TEw/rXf+7B" crossorigin="anonymous"></script>
 </body>
 
 </html>

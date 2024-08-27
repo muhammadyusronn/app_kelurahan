@@ -8,14 +8,32 @@ class PengajuanModel extends MY_Model
         $this->data['primary_key'] = 'id';
     }
 
-    public function get_all($level)
+    public function get_all($level, $filters = array(), $dateRange = array())
     {
         $this->db->select('pengajuan.*,layanan.nama_layanan');
         $this->db->from('pengajuan');
         $this->db->join('layanan', 'layanan.id=pengajuan.id_layanan');
         if($level=="2"){
             $this->db->where('pengajuan.status',3);
+        }else if($level=="1"){
+            $this->db->where('pengajuan.status',2);
         }
+
+        if (!empty($filters)) {
+            if (isset($filters['status'])) {
+                if($filters['status']!='-99'){
+                $this->db->where('pengajuan.status', $filters['status']);
+                }
+            }
+        }
+
+        if (!empty($dateRange) && isset($dateRange['tanggal_mulai']) && isset($dateRange['tanggal_selesai'])) {
+            $this->db->where('pengajuan.tanggal BETWEEN "' . $dateRange['tanggal_mulai'] . '" AND "' . $dateRange['tanggal_selesai'] . '"');
+        }
+        // $query = $this->db->get_compiled_select();
+        
+        // // Echo or log the compiled query
+        // echo $query;exit;
         return $this->db->get()->result();
     }
 
