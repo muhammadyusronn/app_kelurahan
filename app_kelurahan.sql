@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 26 Agu 2024 pada 17.00
+-- Waktu pembuatan: 27 Agu 2024 pada 17.04
 -- Versi server: 10.4.27-MariaDB
 -- Versi PHP: 7.4.33
 
@@ -415,9 +415,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `nip`, `nama`, `kontak`, `password`, `last_login`, `level_user`, `original_pass`) VALUES
-(1, '11111', 'Admin', '081299929922', '$2y$10$i6LAb9xDh4G.pgVZ.cGknOUtRiPvK5SAW8SeMvAnICqKvnejunsQS', '2024-08-26 09:09:47', 1, ''),
+(1, '11111', 'Admin', '081299929922', '$2y$10$i6LAb9xDh4G.pgVZ.cGknOUtRiPvK5SAW8SeMvAnICqKvnejunsQS', '2024-08-27 08:16:53', 1, ''),
 (2, '22222', 'Drs. Rachmat Maulana', '082189299222', '$2y$10$bMYspn86xs5Syrp9uclhu.WnCGUm9ZOhq2QBKaS8fWZGsxQro3aoW', '2024-08-26 09:55:42', 2, ''),
-(19, '123', 'Muhammad Yusron Hartoyo', '6282186427595', '$2y$10$k.BKGsde17BHQ3xP9GIASu0Z3S955a5.L0BQve6wpF1hUBlv1NXay', '2024-08-26 09:47:58', 3, '123'),
+(19, '123', 'Muhammad Yusron Hartoyo', '6282186427595', '$2y$10$k.BKGsde17BHQ3xP9GIASu0Z3S955a5.L0BQve6wpF1hUBlv1NXay', '2024-08-27 09:46:41', 3, '123'),
 (21, '321', 'Adit', '6282186427595', '$2y$10$aAA2nqSwJuAEykHlBtdb4uN6nKNRgeeHO/D/mMCUV4AhsfuOD/b7e', '2024-08-26 14:14:11', 3, '321'),
 (22, '33333', 'Staff', '08128222121', '$2y$10$C0cs4dl.yDy5Zib4KStJVOtah3cEi/oQ/ljU2kIlzEhpPEMKisPtO', '2024-08-26 13:49:49', 1, '33333');
 
