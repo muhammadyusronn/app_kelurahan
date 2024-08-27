@@ -6,11 +6,6 @@ class DokumenController extends MY_Controller
         parent::__construct();
         $this->load->library('qr_code');
         $this->load->model('PengajuanModel');
-        $this->data['token'] = $this->session->userdata('token');
-        if (empty($this->data['token'])) {
-            $this->flashmsg('Anda harus login dulu!', 'danger');
-            redirect('login');
-        }
     }
 
     public function index($id)
