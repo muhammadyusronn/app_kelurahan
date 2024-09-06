@@ -23,20 +23,24 @@ class LayananController extends MY_Controller
     public function laporan()
     {
         $data['title'] = 'Laporan Pengajuan';
-        $status = $this->input->get('status');
-        $tanggal_mulai = $this->input->get('tanggal_mulai');
-        $tanggal_selesai = $this->input->get('tanggal_selesai');
-        $filters = array(
-            'status' => $status
-        );
+        $data['kategori_layanan'] = $this->LayananModel->get(['is_active'=>'1']);
 
-        // Example date range
-        $dateRange = array(
-            'tanggal_mulai' => $tanggal_mulai,
-            'tanggal_selesai' => $tanggal_selesai
-        );
-
-        $data['layanan'] = $this->PengajuanModel->get_all('all', $filters, $dateRange);
+        if(isset($_GET["report_type"])){
+            if($_GET["report_type"]=="monthly"){
+                $data['layanan'] = $this->PengajuanModel->get_report($_GET["report_type"], $_GET);
+                $data["layanan_tahunan"]=[];
+            }else if($_GET["report_type"]=="yearly"){ 
+                $data["layanan"]=[];
+                $data["layanan_tahunan"] = $this->PengajuanModel->get_report($_GET["report_type"], $_GET);
+            }else{ 
+                $data["layanan"]=[];
+                $data["layanan_tahunan"]=[];
+            }
+        }else{
+            $data["layanan"] = [];
+            $data["layanan_tahunan"] = [];
+        }
+        
         $this->render('backend/layanan/data-laporan', $data);
     }
 

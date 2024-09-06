@@ -13,16 +13,16 @@ class PengajuanModel extends MY_Model
         $this->db->select('pengajuan.*,layanan.nama_layanan');
         $this->db->from('pengajuan');
         $this->db->join('layanan', 'layanan.id=pengajuan.id_layanan');
-        if($level=="2"){
-            $this->db->where('pengajuan.status',3);
-        }else if($level=="1"){
-            $this->db->where('pengajuan.status',2);
+        if ($level == "2") {
+            $this->db->where('pengajuan.status', 3);
+        } else if ($level == "1") {
+            $this->db->where('pengajuan.status', 2);
         }
 
         if (!empty($filters)) {
             if (isset($filters['status'])) {
-                if($filters['status']!='-99'){
-                $this->db->where('pengajuan.status', $filters['status']);
+                if ($filters['status'] != '-99') {
+                    $this->db->where('pengajuan.status', $filters['status']);
                 }
             }
         }
@@ -31,7 +31,44 @@ class PengajuanModel extends MY_Model
             $this->db->where('pengajuan.tanggal BETWEEN "' . $dateRange['tanggal_mulai'] . '" AND "' . $dateRange['tanggal_selesai'] . '"');
         }
         // $query = $this->db->get_compiled_select();
-        
+
+        // // Echo or log the compiled query
+        // echo $query;exit;
+        return $this->db->get()->result();
+    }
+
+    public function get_report($type, $filters = array())
+    {
+        $this->db->select('pengajuan.*,layanan.nama_layanan');
+        $this->db->from('pengajuan');
+        $this->db->join('layanan', 'layanan.id=pengajuan.id_layanan');
+        if (!empty($filters)) {
+            if (isset($filters['status'])) {
+                if ($filters['status'] != '-99') {
+                    $this->db->where('pengajuan.status', $filters['status']);
+                }
+            }
+        }
+        if (!empty($filters)) {
+            if (isset($filters['layanan'])) {
+                if ($filters['layanan'] != '-99') {
+                    $this->db->where('pengajuan.id_layanan', $filters['layanan']);
+                }
+            }
+        }
+
+        if (!empty($filters)) {
+            if (isset($filters['bulan'])) {
+                $this->db->where('MONTH(pengajuan.tanggal)', $filters['bulan']);
+            }
+        }
+        if (!empty($filters)) {
+            if (isset($filters['tahun'])) {
+                $this->db->where('YEAR(pengajuan.tanggal)', $filters['tahun']);
+            }
+        }
+        //  $query = $this->db->get_compiled_select();
+
         // // Echo or log the compiled query
         // echo $query;exit;
         return $this->db->get()->result();
@@ -42,7 +79,7 @@ class PengajuanModel extends MY_Model
         $this->db->select('pengajuan.*,layanan.nama_layanan');
         $this->db->from('pengajuan');
         $this->db->join('layanan', 'layanan.id=pengajuan.id_layanan');
-        $this->db->where('pengajuan.id_pemohon',$pemohon);
+        $this->db->where('pengajuan.id_pemohon', $pemohon);
         return $this->db->get()->result();
     }
 
