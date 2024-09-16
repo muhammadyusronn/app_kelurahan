@@ -189,8 +189,7 @@
             pageLength: 10,
         });
     })
-    $(document).ready(function() {
-        $('.report-table').DataTable({
+    $(document).ready(function() {$('.report-table-monthly').DataTable({
             responsive: true,
             dom: '<"dt-top-container"<l><"dt-center-in-div"B><f>r>t<"dt-filter-spacer"><ip>',
             buttons: [{
@@ -199,6 +198,12 @@
                     "className": 'btn btn-primary',
                     exportOptions: {
                         // columns: [0, 1, 2, 3, 4, 5, 6, 7]
+                    },
+                    title: function() {
+                        return generateDynamicTitleMonthly();
+                    },
+                    messageTop: function() {
+                        return generateHeaderFilterMonthly();
                     }
                 },
                 {
@@ -207,6 +212,12 @@
                     "className": 'btn btn-success',
                     exportOptions: {
                         // columns: [0, 1, 2, 3, 4, 5, 6, 7]
+                    },
+                    title: function() {
+                        return generateDynamicTitleMonthly();
+                    },
+                    messageTop: function() {
+                        return generateHeaderFilterMonthly();
                     }
                 },
                 {
@@ -215,10 +226,91 @@
                     "className": 'btn btn-warning',
                     exportOptions: {
                         // columns: [0, 1, 2, 3, 4, 5, 6, 7]
+                    },
+                    title: function() {
+                        return generateDynamicTitleMonthly();
+                    },
+                    messageTop: function() {
+                        return generateHeaderFilterMonthly();
                     }
                 }
             ]
         });
+        // Function to create a dynamic title for the export
+        function generateDynamicTitleMonthly() {
+            return 'Laporan Data Rekapitulasi Layanan Kecamatan Jakabaring'; // You can make this dynamic if needed
+        }
+
+        // Function to generate the filter header
+        function generateHeaderFilterMonthly() {
+            var month = $('.valBulanM option:selected').text();
+            var year = $('.valTahunM option:selected').text();
+            var layanan = $('.valLayananM option:selected').text();
+            var status = $('.valStatusM option:selected').text();
+
+            return 'Periode: ' + month + ' - '+ year + ' | Layanan: ' + layanan + ' | Status: ' + status;
+        }
+        $('.report-table-yearly').DataTable({
+            responsive: true,
+            dom: '<"dt-top-container"<l><"dt-center-in-div"B><f>r>t<"dt-filter-spacer"><ip>',
+            buttons: [{
+                    "extend": 'pdf',
+                    "text": '<span class="fa fa-file-pdf-o"> PDF</span>',
+                    "className": 'btn btn-primary',
+                    exportOptions: {
+                        // columns: [0, 1, 2, 3, 4, 5, 6, 7]
+                    },
+                    title: function() {
+                        return generateDynamicTitleYearly();
+                    },
+                    messageTop: function() {
+                        return generateHeaderFilterYearly();
+                    }
+                },
+                {
+                    "extend": 'excel',
+                    "text": '<span class="fa fa-file-excel-o"> Excel</span>',
+                    "className": 'btn btn-success',
+                    exportOptions: {
+                        // columns: [0, 1, 2, 3, 4, 5, 6, 7]
+                    },
+                    title: function() {
+                        return generateDynamicTitleYearly();
+                    },
+                    messageTop: function() {
+                        return generateHeaderFilterYearly();
+                    }
+                },
+                {
+                    "extend": 'print',
+                    "text": '<span class="fa fa-print"> Print</span>',
+                    "className": 'btn btn-warning',
+                    exportOptions: {
+                        // columns: [0, 1, 2, 3, 4, 5, 6, 7]
+                    },
+                    title: function() {
+                        return generateDynamicTitleYearly();
+                    },
+                    messageTop: function() {
+                        return generateHeaderFilterYearly();
+                    }
+                }
+            ]
+        });
+
+        // Function to create a dynamic title for the export
+        function generateDynamicTitleYearly() {
+            return 'Laporan Data Rekapitulasi Layanan Kecamatan Jakabaring'; // You can make this dynamic if needed
+        }
+
+        // Function to generate the filter header
+        function generateHeaderFilterYearly() {
+            var year = $('.valTahunY option:selected').text();
+            var layanan = $('.valLayananY option:selected').text();
+            var status = $('.valStatusY option:selected').text();
+
+            return 'Periode: ' + year + ' | Layanan: ' + layanan + ' | Status: ' + status;
+        }
     });
 </script>
 

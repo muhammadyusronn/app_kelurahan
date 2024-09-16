@@ -21,7 +21,7 @@
                     <div class="row">
                         <div class="form-group col-sm-3">
                             <label for="bulan">Bulan</label>
-                            <select class="form-control" id="bulan" name="bulan">
+                            <select class="form-control valBulanM" id="bulan" name="bulan">
                                 <?php
                                 $months = [
                                     1 => 'January',
@@ -45,7 +45,7 @@
                         </div>
                         <div class="form-group col-sm-3">
                             <label for="layanan">Layanan</label>
-                            <select class="form-control" name="layanan" id="layanan">
+                            <select class="form-control valLayananM" name="layanan" id="layanan">
                                 <option value="-99" <?= (isset($_GET["layanan"]) && $_GET["layanan"] == "-99"  && $_GET["report_type"] == "monthly") ? "selected" : ""; ?>>ALL</option>
                                 <?php foreach ($kategori_layanan as $l) : ?>
                                     <option value="<?= $l->id ?>" <?= (isset($_GET["layanan"]) && $_GET["layanan"] == $l->id  && $_GET["report_type"] == "monthly") ? "selected" : ""; ?>><?= $l->nama_layanan ?></option>
@@ -54,17 +54,17 @@
                         </div>
                         <div class="form-group col-sm-3">
                             <label for="status">Status</label>
-                            <select class="form-control" name="status" id="status">
+                            <select class="form-control valStatusM" name="status" id="status">
                                 <option value="-99" <?= (isset($_GET["status"]) && $_GET["status"] == "-99"  && $_GET["report_type"] == "monthly") ? "selected" : ""; ?>>ALL</option>
                                 <option value="0" <?= (isset($_GET["status"]) && $_GET["status"] == "0"  && $_GET["report_type"] == "monthly") ? "selected" : ""; ?>>Ditolak</option>
-                                <option value="1"> <?= (isset($_GET["status"]) && $_GET["status"] == "1"  && $_GET["report_type"] == "monthly") ? "selected" : ""; ?>Selesai</option>
+                                <option value="1" <?= (isset($_GET["status"]) && $_GET["status"] == "1"  && $_GET["report_type"] == "monthly") ? "selected" : ""; ?>>Selesai</option>
                                 <option value="2" <?= (isset($_GET["status"]) && $_GET["status"] == "2"  && $_GET["report_type"] == "monthly") ? "selected" : ""; ?>>Menunggu Verifikasi Berkas</option>
                                 <option value="3" <?= (isset($_GET["status"]) && $_GET["status"] == "3"  && $_GET["report_type"] == "monthly") ? "selected" : ""; ?>>Menunggu Approval Camat</option>
                             </select>
                         </div>
                         <div class="form-group col-sm-3">
                             <label for="tahun">Tahun</label>
-                            <select class="form-control" name="tahun" id="tahun">
+                            <select class="form-control valTahunM" name="tahun" id="tahun">
                                 <?php $tahun_sekarang = date('Y');
                                 // Looping dari tahun sekarang hingga lima tahun ke belakang
                                 for ($i = $tahun_sekarang; $i >= ($tahun_sekarang - 5); $i--) { ?>
@@ -80,7 +80,7 @@
                         </div>
                     </div>
                 </form>
-                <table class="table table-striped table-bordered table-hover table-responsive report-table" cellspacing="0" width="100%">
+                <table class="table table-striped table-bordered table-hover table-responsive report-table-monthly" cellspacing="0" width="100%">
                     <thead>
                         <tr>
                             <th>Tanggal</th>
@@ -144,7 +144,7 @@
                     <div class="row">
                         <div class="form-group col-sm-3">
                             <label for="tahun">Tahun</label>
-                            <select class="form-control" name="tahun" id="tahun">
+                            <select class="form-control valTahunY" name="tahun" id="tahun">
                                 <?php $tahun_sekarang = date('Y');
                                 // Looping dari tahun sekarang hingga lima tahun ke belakang
                                 for ($i = $tahun_sekarang; $i >= ($tahun_sekarang - 5); $i--) { ?>
@@ -155,7 +155,7 @@
                         </div>
                         <div class="form-group col-sm-3">
                             <label for="layanan">Layanan</label>
-                            <select class="form-control" name="layanan" id="layanan">
+                            <select class="form-control valLayananY" name="layanan" id="layanan">
                                 <option value="-99" <?= (isset($_GET["layanan"]) && $_GET["layanan"] == "-99"  && $_GET["report_type"] == "yearly") ? "selected" : ""; ?>>ALL</option>
                                 <?php foreach ($kategori_layanan as $l) : ?>
                                     <option value="<?= $l->id ?>" <?= (isset($_GET["layanan"]) && $_GET["layanan"] == $l->id && $_GET["report_type"] == "yearly") ? "selected" : ""; ?>><?= $l->nama_layanan ?></option>
@@ -164,10 +164,10 @@
                         </div>
                         <div class="form-group col-sm-3">
                             <label for="status">Status</label>
-                            <select class="form-control" name="status" id="status">
+                            <select class="form-control valStatusY" name="status" id="status">
                                 <option value="-99" <?= (isset($_GET["status"]) && $_GET["status"] == "-99" && $_GET["report_type"] == "yearly") ? "selected" : ""; ?>>ALL</option>
                                 <option value="0" <?= (isset($_GET["status"]) && $_GET["status"] == "0" && $_GET["report_type"] == "yearly") ? "selected" : ""; ?>>Ditolak</option>
-                                <option value="1"> <?= (isset($_GET["status"]) && $_GET["status"] == "1" && $_GET["report_type"] == "yearly") ? "selected" : ""; ?>Selesai</option>
+                                <option value="1" <?= (isset($_GET["status"]) && $_GET["status"] == "1" && $_GET["report_type"] == "yearly") ? "selected" : ""; ?>>Selesai</option>
                                 <option value="2" <?= (isset($_GET["status"]) && $_GET["status"] == "2" && $_GET["report_type"] == "yearly") ? "selected" : ""; ?>>Menunggu Verifikasi Berkas</option>
                                 <option value="3" <?= (isset($_GET["status"]) && $_GET["status"] == "3") && $_GET["report_type"] == "yearly" ? "selected" : ""; ?>>Menunggu Approval Camat</option>
                             </select>
@@ -179,7 +179,7 @@
                         </div>
                     </div>
                 </form>
-                <table class="table table-striped table-bordered table-hover table-responsive report-table" cellspacing="0" width="100%">
+                <table class="table table-striped table-bordered table-hover table-responsive report-table-yearly" cellspacing="0" width="100%">
                     <thead>
                         <tr>
                             <th>Tanggal</th>
